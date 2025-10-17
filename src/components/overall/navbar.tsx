@@ -19,18 +19,18 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-2">
-            <a 
-              href="#about" 
+            <Link 
+              href="/about" 
               className="px-5 py-2.5 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
             >
               About
-            </a>
-            <a 
-              href="#work" 
+            </Link>
+            <Link 
+              href="/faqs" 
               className="px-5 py-2.5 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
             >
-              Work
-            </a>
+              FAQs
+            </Link>
             <Link 
               href="/contact" 
               className="px-5 py-2.5 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"

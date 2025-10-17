@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Three() {
   return (
     <section className="py-20 px-8 md:px-12">
@@ -112,9 +114,9 @@ export default function Three() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 p-6 bg-gradient-to-r from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl">
             <p className="text-white font-medium">Ready to start your project?</p>
-            <button className="px-6 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105">
+            <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>
