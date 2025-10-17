@@ -1,8 +1,10 @@
 "use client";
 
 import Navbar from "@/components/overall/navbar";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutPage() {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
       {/* Animated gradient background */}
@@ -20,17 +22,16 @@ export default function AboutPage() {
             {/* Header */}
             <div className="text-center mb-16">
               <span className="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
-                About Us
+                {t("aboutPage.badge")}
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                We Build{" "}
+                {t("aboutPage.title")}{" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
-                  Digital Experiences
+                  {t("aboutPage.titleHighlight")}
                 </span>
               </h1>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Crafting innovative solutions that transform ideas into reality
-                with cutting-edge technology and creative excellence.
+                {t("aboutPage.subtitle")}
               </p>
             </div>
 
@@ -53,11 +54,9 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{t("aboutPage.missionTitle")}</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  We're dedicated to pushing the boundaries of what's possible in
-                  digital innovation. Our mission is to empower businesses with
-                  transformative technology solutions that drive growth and success.
+                  {t("aboutPage.missionDesc")}
                 </p>
               </div>
 
@@ -84,11 +83,9 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">Our Vision</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{t("aboutPage.visionTitle")}</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  To be the leading force in digital transformation, creating
-                  intuitive and powerful solutions that shape the future of
-                  technology and enhance the way people interact with digital products.
+                  {t("aboutPage.visionDesc")}
                 </p>
               </div>
             </div>
@@ -96,39 +93,36 @@ export default function AboutPage() {
             {/* Values Section */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12">
-                Our Core{" "}
+                {t("aboutPage.valuesTitle")}{" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
-                  Values
+                  {t("aboutPage.valuesHighlight")}
                 </span>
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {/* Innovation */}
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-emerald-500/30 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-4xl mb-4">🚀</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Innovation</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">{t("aboutPage.innovationTitle")}</h4>
                   <p className="text-gray-400 text-sm">
-                    Constantly pushing boundaries and exploring new possibilities
-                    to deliver cutting-edge solutions.
+                    {t("aboutPage.innovationDesc")}
                   </p>
                 </div>
 
                 {/* Excellence */}
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-emerald-500/30 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-4xl mb-4">⭐</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Excellence</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">{t("aboutPage.excellenceTitle")}</h4>
                   <p className="text-gray-400 text-sm">
-                    Committed to the highest standards of quality in everything
-                    we create and deliver.
+                    {t("aboutPage.excellenceDesc")}
                   </p>
                 </div>
 
                 {/* Collaboration */}
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-emerald-500/30 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-4xl mb-4">🤝</div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Collaboration</h4>
+                  <h4 className="text-xl font-semibold text-white mb-2">{t("aboutPage.collaborationTitle")}</h4>
                   <p className="text-gray-400 text-sm">
-                    Working together with our clients to achieve shared goals
-                    and mutual success.
+                    {t("aboutPage.collaborationDesc")}
                   </p>
                 </div>
               </div>
@@ -137,17 +131,16 @@ export default function AboutPage() {
             {/* Team Section */}
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Meet Our{" "}
+                {t("aboutPage.teamTitle")}{" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
-                  Team
+                  {t("aboutPage.teamHighlight")}
                 </span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-                A diverse group of talented individuals passionate about creating
-                exceptional digital experiences and driving innovation forward.
+                {t("aboutPage.teamDesc")}
               </p>
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
-                Join Our Team
+                {t("aboutPage.joinTeam")}
               </button>
             </div>
           </div>

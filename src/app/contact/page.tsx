@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Navbar from "@/components/overall/navbar";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactPage() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,17 +44,16 @@ export default function ContactPage() {
             {/* Header */}
             <div className="text-center mb-16">
               <span className="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
-                Get In Touch
+                {t("contact.badge")}
               </span>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Let's{" "}
+                {t("contact.title")}{" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
-                  Connect
+                  {t("contact.titleHighlight")}
                 </span>
               </h1>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Have a project in mind? We'd love to hear from you. Send us a
-                message and we'll respond as soon as possible.
+                {t("contact.subtitle")}
               </p>
             </div>
 
@@ -65,7 +66,7 @@ export default function ContactPage() {
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-300 mb-2"
                     >
-                      Your Name
+                      {t("contact.nameLabel")}
                     </label>
                     <input
                       type="text"
@@ -75,7 +76,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                      placeholder="John Doe"
+                      placeholder={t("contact.namePlaceholder")}
                     />
                   </div>
 
@@ -84,7 +85,7 @@ export default function ContactPage() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-300 mb-2"
                     >
-                      Email Address
+                      {t("contact.emailLabel")}
                     </label>
                     <input
                       type="email"
@@ -94,7 +95,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                      placeholder="john@example.com"
+                      placeholder={t("contact.emailPlaceholder")}
                     />
                   </div>
 
@@ -103,7 +104,7 @@ export default function ContactPage() {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-300 mb-2"
                     >
-                      Message
+                      {t("contact.messageLabel")}
                     </label>
                     <textarea
                       id="message"
@@ -113,7 +114,7 @@ export default function ContactPage() {
                       required
                       rows={5}
                       className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us about your project..."
+                      placeholder={t("contact.messagePlaceholder")}
                     />
                   </div>
 
@@ -121,7 +122,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-[1.02]"
                   >
-                    Send Message
+                    {t("contact.sendMessage")}
                   </button>
                 </form>
               </div>
@@ -144,7 +145,7 @@ export default function ContactPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t("contact.emailTitle")}</h3>
                   <p className="text-gray-400">hello@example.com</p>
                   <p className="text-gray-400">support@example.com</p>
                 </div>
@@ -165,7 +166,7 @@ export default function ContactPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t("contact.phoneTitle")}</h3>
                   <p className="text-gray-400">+1 (555) 123-4567</p>
                   <p className="text-gray-400">+1 (555) 987-6543</p>
                 </div>
@@ -192,7 +193,7 @@ export default function ContactPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Office</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t("contact.officeTitle")}</h3>
                   <p className="text-gray-400">123 Business Street</p>
                   <p className="text-gray-400">San Francisco, CA 94102</p>
                 </div>

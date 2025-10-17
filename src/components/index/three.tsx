@@ -1,19 +1,23 @@
+"use client";
+
 import Link from 'next/link';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Three() {
+  const { t } = useLanguage();
   return (
     <section className="py-20 px-8 md:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-sm font-semibold text-teal-400 mb-4 tracking-wider uppercase">
-            Our Services
+            {t("services.badge")}
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            What We Do Best
+            {t("services.title")}
           </h3>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Comprehensive digital solutions tailored to elevate your brand and accelerate growth
+            {t("services.subtitle")}
           </p>
         </div>
 
@@ -28,9 +32,9 @@ export default function Three() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3">Web Development</h4>
+              <h4 className="text-2xl font-bold text-white mb-3">{t("services.webDev")}</h4>
               <p className="text-gray-400 mb-6">
-                Custom websites and web applications built with modern frameworks and best practices
+                {t("services.webDevDesc")}
               </p>
               <ul className="space-y-2 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
@@ -39,11 +43,11 @@ export default function Three() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  Responsive Design
+                  {t("services.responsiveDesign")}
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  Performance Optimization
+                  {t("services.performance")}
                 </li>
               </ul>
             </div>
@@ -58,9 +62,9 @@ export default function Three() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3">Mobile Apps</h4>
+              <h4 className="text-2xl font-bold text-white mb-3">{t("services.mobileApps")}</h4>
               <p className="text-gray-400 mb-6">
-                Native and cross-platform mobile applications that deliver seamless experiences
+                {t("services.mobileAppsDesc")}
               </p>
               <ul className="space-y-2 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
@@ -73,7 +77,7 @@ export default function Three() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
-                  App Store Deployment
+                  {t("services.appStore")}
                 </li>
               </ul>
             </div>
@@ -88,22 +92,22 @@ export default function Three() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3">UI/UX Design</h4>
+              <h4 className="text-2xl font-bold text-white mb-3">{t("services.uiux")}</h4>
               <p className="text-gray-400 mb-6">
-                Beautiful and intuitive interfaces designed with users in mind from concept to pixel
+                {t("services.uiuxDesc")}
               </p>
               <ul className="space-y-2 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  User Research
+                  {t("services.userResearch")}
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  Wireframing & Prototyping
+                  {t("services.wireframing")}
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  Design Systems
+                  {t("services.designSystems")}
                 </li>
               </ul>
             </div>
@@ -113,9 +117,9 @@ export default function Three() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 p-6 bg-gradient-to-r from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl">
-            <p className="text-white font-medium">Ready to start your project?</p>
+            <p className="text-white font-medium">{t("services.cta")}</p>
             <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105">
-              Get Started
+              {t("services.getStarted")}
             </Link>
           </div>
         </div>
