@@ -43,11 +43,11 @@ export default function Three() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  {t("services.responsiveDesign")}
+                  SEO Optimized
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  {t("services.performance")}
+                  Mobile Responsive
                 </li>
               </ul>
             </div>
@@ -69,15 +69,15 @@ export default function Three() {
               <ul className="space-y-2 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
-                  iOS & Android
+                  Payment Integration
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
-                  React Native
+                  Product Management
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
-                  {t("services.appStore")}
+                  Secure Checkout
                 </li>
               </ul>
             </div>
@@ -99,15 +99,15 @@ export default function Three() {
               <ul className="space-y-2 text-sm text-gray-500">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  {t("services.userResearch")}
+                  Custom Features
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  {t("services.wireframing")}
+                  Database Design
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                  {t("services.designSystems")}
+                  API Integration
                 </li>
               </ul>
             </div>

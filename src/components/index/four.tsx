@@ -134,8 +134,8 @@ export default function Four() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">{t("contact.emailTitle")}</h3>
-              <p className="text-gray-400">hello@example.com</p>
-              <p className="text-gray-400">support@example.com</p>
+              <p className="text-gray-400">hello@artificialwebs.com</p>
+              <p className="text-gray-400">contact@artificialwebs.com</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-300 group">
@@ -155,8 +155,8 @@ export default function Four() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">{t("contact.phoneTitle")}</h3>
-              <p className="text-gray-400">+1 (555) 123-4567</p>
-              <p className="text-gray-400">+1 (555) 987-6543</p>
+              <p className="text-gray-400">+1 (555) 234-WEBS</p>
+              <p className="text-gray-400">+1 (555) 234-9327</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-300 group">
@@ -182,8 +182,8 @@ export default function Four() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">{t("contact.officeTitle")}</h3>
-              <p className="text-gray-400">123 Business Street</p>
-              <p className="text-gray-400">San Francisco, CA 94102</p>
+              <p className="text-gray-400">Digital Studio Hub</p>
+              <p className="text-gray-400">Remote & Worldwide</p>
             </div>
           </div>
         </div>

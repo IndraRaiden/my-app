@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Artificial Webs
+
+A modern website development studio platform built with Next.js, React, and TypeScript. This is the official website for **Artificial Webs** - a professional web development studio specializing in creating extraordinary digital experiences.
+
+## Features
+
+- 🎨 Modern, responsive design with Tailwind CSS
+- 🌐 Bilingual support (English/Spanish)
+- ⚡ Built with Next.js 15 for optimal performance
+- 🎯 Specialized services: Corporate Websites, E-Commerce, Web Applications
+- 📱 Fully responsive across all devices
+- 🔧 TypeScript for type safety
 
 ## Getting Started
 

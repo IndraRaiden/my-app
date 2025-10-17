@@ -49,58 +49,58 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.getStarted": "Comenzar",
 
     // Hero Section
-    "hero.badge": "Bienvenido al Futuro",
-    "hero.title": "Construye Algo",
-    "hero.titleHighlight": "Increíble",
+    "hero.badge": "Estudio de Desarrollo Web",
+    "hero.title": "Creamos Sitios Web",
+    "hero.titleHighlight": "Extraordinarios",
     "hero.subtitle":
-      "Transforma tus ideas en realidad con soluciones de vanguardia que escalan e inspiran",
-    "hero.getStarted": "Comenzar",
-    "hero.learnMore": "Saber Más",
+      "En Artificial Webs transformamos tu visión en experiencias digitales impactantes que conectan con tu audiencia",
+    "hero.getStarted": "Comenzar Proyecto",
+    "hero.learnMore": "Ver Portfolio",
 
     // About Section
-    "about.badge": "Acerca de Nosotros",
-    "about.title": "Creamos Experiencias Digitales que Importan",
+    "about.badge": "Acerca de Artificial Webs",
+    "about.title": "Tu Estudio de Desarrollo Web de Confianza",
     "about.description1":
-      "Con más de una década de experiencia, nos especializamos en crear soluciones digitales innovadoras que generan resultados. Nuestro equipo combina creatividad con experiencia técnica para ofrecer experiencias excepcionales para empresas de todos los tamaños.",
+      "Somos Artificial Webs, un estudio especializado en el desarrollo de sitios web modernos y soluciones digitales a medida. Combinamos diseño innovador con tecnología de punta para crear presencias web que destacan y generan resultados reales para tu negocio.",
     "about.description2":
-      "Desde startups hasta grandes empresas, hemos ayudado a cientos de clientes a transformar su visión en realidad a través de diseño y desarrollo de vanguardia.",
+      "Desde sitios corporativos hasta tiendas en línea y aplicaciones web complejas, trabajamos contigo en cada paso del proceso para asegurar que tu proyecto supere todas las expectativas.",
     "about.ourStory": "Nuestra Historia",
     "about.meetTeam": "Conoce al Equipo",
-    "about.innovation": "Innovación Primero",
+    "about.innovation": "Tecnología Moderna",
     "about.innovationDesc":
-      "Aprovechando las últimas tecnologías para construir soluciones a prueba de futuro",
-    "about.clientCentered": "Enfocados en el Cliente",
+      "Utilizamos React, Next.js y las últimas tecnologías para sitios web rápidos y escalables",
+    "about.clientCentered": "Enfoque Personalizado",
     "about.clientDesc":
-      "Tu éxito es nuestra prioridad. Trabajamos estrechamente contigo en cada paso del camino",
-    "about.quality": "Calidad Asegurada",
+      "Cada proyecto es único. Trabajamos estrechamente contigo para entender tu visión y objetivos",
+    "about.quality": "Diseño & Código Impecable",
     "about.qualityDesc":
-      "Pruebas rigurosas y atención al detalle en todo lo que entregamos",
+      "Atención meticulosa al detalle tanto en diseño visual como en la calidad del código",
     "about.projects": "Proyectos",
     "about.clients": "Clientes",
     "about.years": "Años",
     "about.satisfaction": "Satisfacción",
 
     // Services Section
-    "services.badge": "Nuestros Servicios",
-    "services.title": "Lo Que Mejor Hacemos",
+    "services.badge": "Servicios de Artificial Webs",
+    "services.title": "Servicios Especializados",
     "services.subtitle":
-      "Soluciones digitales integrales adaptadas para elevar tu marca y acelerar el crecimiento",
-    "services.webDev": "Desarrollo Web",
+      "Desarrollamos sitios web y soluciones digitales completas que impulsan tu negocio al siguiente nivel",
+    "services.webDev": "Sitios Web Corporativos",
     "services.webDevDesc":
-      "Sitios web y aplicaciones web personalizadas construidas con frameworks modernos y mejores prácticas",
+      "Sitios web profesionales, responsivos y optimizados que reflejan la esencia de tu marca con tecnología de punta",
     "services.responsiveDesign": "Diseño Responsivo",
     "services.performance": "Optimización de Rendimiento",
-    "services.mobileApps": "Aplicaciones Móviles",
+    "services.mobileApps": "E-Commerce & Tiendas",
     "services.mobileAppsDesc":
-      "Aplicaciones móviles nativas y multiplataforma que ofrecen experiencias fluidas",
+      "Plataformas de comercio electrónico completas con pasarelas de pago, gestión de inventario y más",
     "services.appStore": "Publicación en Tiendas de Apps",
-    "services.uiux": "Diseño UI/UX",
+    "services.uiux": "Aplicaciones Web",
     "services.uiuxDesc":
-      "Interfaces hermosas e intuitivas diseñadas pensando en los usuarios desde el concepto hasta el pixel",
+      "Aplicaciones web personalizadas, dashboards y sistemas que automatizan y optimizan tus procesos",
     "services.userResearch": "Investigación de Usuarios",
     "services.wireframing": "Wireframes y Prototipos",
     "services.designSystems": "Sistemas de Diseño",
-    "services.cta": "¿Listo para comenzar tu proyecto?",
+    "services.cta": "¿Listo para llevar tu negocio al mundo digital?",
     "services.getStarted": "Comenzar",
 
     // Contact Section
@@ -121,28 +121,28 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.officeTitle": "Oficina",
 
     // About Page
-    "aboutPage.badge": "Acerca de Nosotros",
-    "aboutPage.title": "Construimos",
-    "aboutPage.titleHighlight": "Experiencias Digitales",
+    "aboutPage.badge": "Sobre Artificial Webs",
+    "aboutPage.title": "Desarrollamos Sitios Web",
+    "aboutPage.titleHighlight": "Que Impulsan Negocios",
     "aboutPage.subtitle":
-      "Creando soluciones innovadoras que transforman ideas en realidad con tecnología de vanguardia y excelencia creativa.",
+      "Somos un estudio dedicado a crear soluciones web innovadoras que ayudan a empresas y emprendedores a destacar en el mundo digital.",
     "aboutPage.missionTitle": "Nuestra Misión",
     "aboutPage.missionDesc":
-      "Estamos dedicados a superar los límites de lo posible en innovación digital. Nuestra misión es empoderar a las empresas con soluciones tecnológicas transformadoras que impulsen el crecimiento y el éxito.",
+      "Hacer que el desarrollo web profesional sea accesible para todos. Creemos que cada negocio merece una presencia web de calidad que refleje su valor y ayude a alcanzar sus objetivos.",
     "aboutPage.visionTitle": "Nuestra Visión",
     "aboutPage.visionDesc":
-      "Ser la fuerza líder en transformación digital, creando soluciones intuitivas y poderosas que den forma al futuro de la tecnología y mejoren la forma en que las personas interactúan con productos digitales.",
+      "Convertirnos en el estudio de desarrollo web preferido, reconocido por nuestra creatividad, calidad técnica y compromiso con el éxito de nuestros clientes.",
     "aboutPage.valuesTitle": "Nuestros",
     "aboutPage.valuesHighlight": "Valores",
     "aboutPage.innovationTitle": "Innovación",
     "aboutPage.innovationDesc":
-      "Superando constantemente límites y explorando nuevas posibilidades para ofrecer soluciones de vanguardia.",
-    "aboutPage.excellenceTitle": "Excelencia",
+      "Adoptamos las últimas tecnologías y tendencias para crear sitios web modernos y funcionales.",
+    "aboutPage.excellenceTitle": "Calidad",
     "aboutPage.excellenceDesc":
-      "Comprometidos con los más altos estándares de calidad en todo lo que creamos y entregamos.",
+      "Cada línea de código y cada pixel cuenta. Nos enfocamos en entregar trabajo excepcional.",
     "aboutPage.collaborationTitle": "Colaboración",
     "aboutPage.collaborationDesc":
-      "Trabajando junto a nuestros clientes para lograr objetivos compartidos y éxito mutuo.",
+      "Tu proyecto es nuestro proyecto. Trabajamos codo a codo contigo desde el concepto hasta el lanzamiento.",
     "aboutPage.teamTitle": "Conoce a Nuestro",
     "aboutPage.teamHighlight": "Equipo",
     "aboutPage.teamDesc":
@@ -155,30 +155,30 @@ const translations: Record<Language, Record<string, string>> = {
     "faqs.titleHighlight": "Frecuentes",
     "faqs.subtitle":
       "Encuentra respuestas a preguntas comunes sobre nuestros servicios, proceso y cómo podemos ayudarte a dar vida a tu proyecto.",
-    "faqs.q1": "¿Qué servicios ofrecen?",
+    "faqs.q1": "¿Qué servicios ofrece Artificial Webs?",
     "faqs.a1":
-      "Ofrecemos una gama completa de servicios digitales incluyendo desarrollo web, desarrollo de aplicaciones móviles, diseño UI/UX, soluciones en la nube y consultoría de transformación digital. Nuestro equipo se especializa en crear soluciones personalizadas adaptadas a las necesidades específicas de tu negocio.",
-    "faqs.q2": "¿Cuánto tiempo toma un proyecto típico?",
+      "En Artificial Webs nos especializamos en desarrollo de sitios web corporativos, tiendas en línea (e-commerce), aplicaciones web personalizadas, landing pages, y mantenimiento web. Trabajamos principalmente con tecnologías modernas como React, Next.js y Node.js.",
+    "faqs.q2": "¿Cuánto tiempo toma desarrollar un sitio web?",
     "faqs.a2":
-      "Los plazos del proyecto varían según el alcance y la complejidad. Un sitio web simple puede tomar de 2 a 4 semanas, mientras que una aplicación web compleja podría tomar de 3 a 6 meses. Proporcionamos estimaciones detalladas de los plazos durante la fase de consulta inicial.",
+      "Depende del tipo de proyecto. Una landing page puede estar lista en 1-2 semanas, un sitio corporativo completo toma 3-6 semanas, y una tienda en línea completa puede tomar 6-12 semanas. Te daremos un estimado preciso después de analizar tus requisitos.",
     "faqs.q3": "¿Cuál es su proceso de desarrollo?",
     "faqs.a3":
       "Seguimos una metodología de desarrollo ágil con sprints regulares y sesiones de retroalimentación con el cliente. Nuestro proceso incluye descubrimiento, diseño, desarrollo, pruebas, implementación y soporte continuo. Tendrás total visibilidad durante todo el ciclo de vida del proyecto.",
     "faqs.q4": "¿Ofrecen soporte continuo después del lanzamiento?",
     "faqs.a4":
       "¡Sí! Ofrecemos varios paquetes de mantenimiento y soporte para garantizar que tu proyecto continúe funcionando sin problemas. Esto incluye correcciones de errores, actualizaciones de seguridad, optimización del rendimiento y mejoras de funciones según tus necesidades.",
-    "faqs.q5": "¿Con qué tecnologías trabajan?",
+    "faqs.q5": "¿Qué tecnologías utiliza Artificial Webs?",
     "faqs.a5":
-      "Trabajamos con tecnologías modernas incluyendo React, Next.js, Node.js, TypeScript, Python, AWS y muchas más. Seleccionamos cuidadosamente el mejor stack tecnológico para cada proyecto según tus requisitos y objetivos a largo plazo.",
+      "Trabajamos con tecnologías modernas y probadas como React, Next.js, TypeScript, Tailwind CSS, Node.js, y bases de datos como PostgreSQL y MongoDB. Elegimos las mejores herramientas para cada proyecto para garantizar velocidad, seguridad y escalabilidad.",
     "faqs.q6": "¿Cuánto cuesta un proyecto?",
     "faqs.a6":
       "Los costos del proyecto varían según la complejidad, las características y el cronograma. Proporcionamos precios transparentes y cotizaciones detalladas después de comprender tus requisitos. Ofrecemos modelos de compromiso flexibles que incluyen precio fijo, tiempo y materiales, y opciones de equipo dedicado.",
     "faqs.q7": "¿Pueden ayudar con un proyecto existente?",
     "faqs.a7":
       "¡Absolutamente! Podemos ayudar a mejorar, mantener o escalar tus aplicaciones existentes. Nuestro equipo puede realizar revisiones de código, implementar nuevas funciones, optimizar el rendimiento o refactorizar completamente tu código base si es necesario.",
-    "faqs.q8": "¿Trabajan con startups?",
+    "faqs.q8": "¿Trabajan con startups y pequeños negocios?",
     "faqs.a8":
-      "¡Sí, nos encanta trabajar con startups! Entendemos los desafíos únicos que enfrentan las startups y ofrecemos soluciones flexibles que pueden escalar con tu crecimiento. Podemos ayudarte a construir MVPs, validar ideas e iterar rápidamente según la retroalimentación del mercado.",
+      "¡Por supuesto! Artificial Webs trabaja con empresas de todos los tamaños. Ya sea que estés lanzando tu primer negocio o buscando renovar tu presencia digital existente, tenemos soluciones adaptadas a diferentes presupuestos y necesidades.",
     "faqs.ctaTitle": "¿Aún tienes preguntas?",
     "faqs.ctaDesc": "¿No encuentras la respuesta que buscas? Nos encantaría saber de ti.",
     "faqs.ctaButton": "Ponte en Contacto",
@@ -191,58 +191,58 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.getStarted": "Get Started",
 
     // Hero Section
-    "hero.badge": "Welcome to the Future",
-    "hero.title": "Build Something",
-    "hero.titleHighlight": "Amazing",
+    "hero.badge": "Web Development Studio",
+    "hero.title": "We Create",
+    "hero.titleHighlight": "Extraordinary Websites",
     "hero.subtitle":
-      "Transform your ideas into reality with cutting-edge solutions that scale and inspire",
-    "hero.getStarted": "Get Started",
-    "hero.learnMore": "Learn More",
+      "At Artificial Webs, we transform your vision into impactful digital experiences that connect with your audience",
+    "hero.getStarted": "Start Your Project",
+    "hero.learnMore": "View Portfolio",
 
     // About Section
-    "about.badge": "About Us",
-    "about.title": "We Create Digital Experiences That Matter",
+    "about.badge": "About Artificial Webs",
+    "about.title": "Your Trusted Web Development Studio",
     "about.description1":
-      "With over a decade of experience, we specialize in crafting innovative digital solutions that drive results. Our team combines creativity with technical expertise to deliver exceptional experiences for businesses of all sizes.",
+      "We are Artificial Webs, a studio specialized in developing modern websites and custom digital solutions. We combine innovative design with cutting-edge technology to create web presences that stand out and generate real results for your business.",
     "about.description2":
-      "From startups to enterprises, we've helped hundreds of clients transform their vision into reality through cutting-edge design and development.",
+      "From corporate sites to online stores and complex web applications, we work with you every step of the way to ensure your project exceeds all expectations.",
     "about.ourStory": "Our Story",
     "about.meetTeam": "Meet the Team",
-    "about.innovation": "Innovation First",
+    "about.innovation": "Modern Technology",
     "about.innovationDesc":
-      "Leveraging the latest technologies to build future-proof solutions",
-    "about.clientCentered": "Client-Centered",
+      "We use React, Next.js and the latest technologies for fast and scalable websites",
+    "about.clientCentered": "Personalized Approach",
     "about.clientDesc":
-      "Your success is our priority. We work closely with you every step of the way",
-    "about.quality": "Quality Assured",
+      "Every project is unique. We work closely with you to understand your vision and goals",
+    "about.quality": "Impeccable Design & Code",
     "about.qualityDesc":
-      "Rigorous testing and attention to detail in everything we deliver",
+      "Meticulous attention to detail in both visual design and code quality",
     "about.projects": "Projects",
     "about.clients": "Clients",
     "about.years": "Years",
     "about.satisfaction": "Satisfaction",
 
     // Services Section
-    "services.badge": "Our Services",
-    "services.title": "What We Do Best",
+    "services.badge": "Artificial Webs Services",
+    "services.title": "Specialized Services",
     "services.subtitle":
-      "Comprehensive digital solutions tailored to elevate your brand and accelerate growth",
-    "services.webDev": "Web Development",
+      "We develop websites and complete digital solutions that take your business to the next level",
+    "services.webDev": "Corporate Websites",
     "services.webDevDesc":
-      "Custom websites and web applications built with modern frameworks and best practices",
+      "Professional, responsive and optimized websites that reflect the essence of your brand with cutting-edge technology",
     "services.responsiveDesign": "Responsive Design",
     "services.performance": "Performance Optimization",
-    "services.mobileApps": "Mobile Apps",
+    "services.mobileApps": "E-Commerce & Stores",
     "services.mobileAppsDesc":
-      "Native and cross-platform mobile applications that deliver seamless experiences",
+      "Complete e-commerce platforms with payment gateways, inventory management, and more",
     "services.appStore": "App Store Deployment",
-    "services.uiux": "UI/UX Design",
+    "services.uiux": "Web Applications",
     "services.uiuxDesc":
-      "Beautiful and intuitive interfaces designed with users in mind from concept to pixel",
+      "Custom web applications, dashboards and systems that automate and optimize your processes",
     "services.userResearch": "User Research",
     "services.wireframing": "Wireframing & Prototyping",
     "services.designSystems": "Design Systems",
-    "services.cta": "Ready to start your project?",
+    "services.cta": "Ready to take your business to the digital world?",
     "services.getStarted": "Get Started",
 
     // Contact Section
@@ -263,28 +263,28 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.officeTitle": "Office",
 
     // About Page
-    "aboutPage.badge": "About Us",
-    "aboutPage.title": "We Build",
-    "aboutPage.titleHighlight": "Digital Experiences",
+    "aboutPage.badge": "About Artificial Webs",
+    "aboutPage.title": "We Develop Websites",
+    "aboutPage.titleHighlight": "That Drive Business",
     "aboutPage.subtitle":
-      "Crafting innovative solutions that transform ideas into reality with cutting-edge technology and creative excellence.",
+      "We are a studio dedicated to creating innovative web solutions that help businesses and entrepreneurs stand out in the digital world.",
     "aboutPage.missionTitle": "Our Mission",
     "aboutPage.missionDesc":
-      "We're dedicated to pushing the boundaries of what's possible in digital innovation. Our mission is to empower businesses with transformative technology solutions that drive growth and success.",
+      "Make professional web development accessible to everyone. We believe every business deserves a quality web presence that reflects its value and helps achieve its goals.",
     "aboutPage.visionTitle": "Our Vision",
     "aboutPage.visionDesc":
-      "To be the leading force in digital transformation, creating intuitive and powerful solutions that shape the future of technology and enhance the way people interact with digital products.",
+      "Become the preferred web development studio, recognized for our creativity, technical quality and commitment to our clients' success.",
     "aboutPage.valuesTitle": "Our Core",
     "aboutPage.valuesHighlight": "Values",
     "aboutPage.innovationTitle": "Innovation",
     "aboutPage.innovationDesc":
-      "Constantly pushing boundaries and exploring new possibilities to deliver cutting-edge solutions.",
-    "aboutPage.excellenceTitle": "Excellence",
+      "We embrace the latest technologies and trends to create modern and functional websites.",
+    "aboutPage.excellenceTitle": "Quality",
     "aboutPage.excellenceDesc":
-      "Committed to the highest standards of quality in everything we create and deliver.",
+      "Every line of code and every pixel matters. We focus on delivering exceptional work.",
     "aboutPage.collaborationTitle": "Collaboration",
     "aboutPage.collaborationDesc":
-      "Working together with our clients to achieve shared goals and mutual success.",
+      "Your project is our project. We work side by side with you from concept to launch.",
     "aboutPage.teamTitle": "Meet Our",
     "aboutPage.teamHighlight": "Team",
     "aboutPage.teamDesc":
@@ -297,30 +297,30 @@ const translations: Record<Language, Record<string, string>> = {
     "faqs.titleHighlight": "Questions",
     "faqs.subtitle":
       "Find answers to common questions about our services, process, and how we can help bring your project to life.",
-    "faqs.q1": "What services do you offer?",
+    "faqs.q1": "What services does Artificial Webs offer?",
     "faqs.a1":
-      "We offer a comprehensive range of digital services including web development, mobile app development, UI/UX design, cloud solutions, and digital transformation consulting. Our team specializes in creating custom solutions tailored to your specific business needs.",
-    "faqs.q2": "How long does a typical project take?",
+      "At Artificial Webs we specialize in corporate website development, online stores (e-commerce), custom web applications, landing pages, and web maintenance. We work primarily with modern technologies like React, Next.js, and Node.js.",
+    "faqs.q2": "How long does it take to develop a website?",
     "faqs.a2":
-      "Project timelines vary depending on scope and complexity. A simple website might take 2-4 weeks, while a complex web application could take 3-6 months. We provide detailed timeline estimates during the initial consultation phase.",
+      "It depends on the type of project. A landing page can be ready in 1-2 weeks, a complete corporate site takes 3-6 weeks, and a complete online store can take 6-12 weeks. We'll give you an accurate estimate after analyzing your requirements.",
     "faqs.q3": "What is your development process?",
     "faqs.a3":
       "We follow an agile development methodology with regular sprints and client feedback sessions. Our process includes discovery, design, development, testing, deployment, and ongoing support. You'll have full visibility throughout the entire project lifecycle.",
     "faqs.q4": "Do you provide ongoing support after launch?",
     "faqs.a4":
       "Yes! We offer various maintenance and support packages to ensure your project continues to run smoothly. This includes bug fixes, security updates, performance optimization, and feature enhancements based on your needs.",
-    "faqs.q5": "What technologies do you work with?",
+    "faqs.q5": "What technologies does Artificial Webs use?",
     "faqs.a5":
-      "We work with modern technologies including React, Next.js, Node.js, TypeScript, Python, AWS, and many more. We carefully select the best technology stack for each project based on your requirements and long-term goals.",
+      "We work with modern and proven technologies like React, Next.js, TypeScript, Tailwind CSS, Node.js, and databases like PostgreSQL and MongoDB. We choose the best tools for each project to ensure speed, security, and scalability.",
     "faqs.q6": "How much does a project cost?",
     "faqs.a6":
       "Project costs vary based on complexity, features, and timeline. We provide transparent pricing and detailed quotes after understanding your requirements. We offer flexible engagement models including fixed-price, time & materials, and dedicated team options.",
     "faqs.q7": "Can you help with an existing project?",
     "faqs.a7":
       "Absolutely! We can help improve, maintain, or scale your existing applications. Our team can conduct code reviews, implement new features, optimize performance, or completely refactor your codebase if needed.",
-    "faqs.q8": "Do you work with startups?",
+    "faqs.q8": "Do you work with startups and small businesses?",
     "faqs.a8":
-      "Yes, we love working with startups! We understand the unique challenges startups face and offer flexible solutions that can scale with your growth. We can help you build MVPs, validate ideas, and iterate quickly based on market feedback.",
+      "Absolutely! Artificial Webs works with businesses of all sizes. Whether you're launching your first business or looking to renovate your existing digital presence, we have solutions tailored to different budgets and needs.",
     "faqs.ctaTitle": "Still have questions?",
     "faqs.ctaDesc": "Can't find the answer you're looking for? We'd love to hear from you.",
     "faqs.ctaButton": "Get In Touch",

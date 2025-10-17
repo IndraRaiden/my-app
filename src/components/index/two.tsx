@@ -76,19 +76,19 @@ export default function Two() {
         <div className="mt-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">500+</div>
+              <div className="text-3xl font-bold text-emerald-400 mb-2">150+</div>
               <div className="text-sm text-gray-500">{t("about.projects")}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-teal-400 mb-2">50+</div>
+              <div className="text-3xl font-bold text-teal-400 mb-2">75+</div>
               <div className="text-sm text-gray-500">{t("about.clients")}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">10+</div>
+              <div className="text-3xl font-bold text-emerald-400 mb-2">5+</div>
               <div className="text-sm text-gray-500">{t("about.years")}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-teal-400 mb-2">100%</div>
+              <div className="text-3xl font-bold text-teal-400 mb-2">98%</div>
               <div className="text-sm text-gray-500">{t("about.satisfaction")}</div>
             </div>
           </div>

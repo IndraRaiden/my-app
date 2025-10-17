@@ -17,7 +17,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
-              Brand
+              Artificial Webs
             </span>
           </Link>
 
