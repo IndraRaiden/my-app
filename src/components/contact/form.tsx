@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { gaEvent, adsConversion, makeAdsSendTo } from "@/lib/gtag";
 
 export default function Form() {
   const { t } = useLanguage();
+  const ADS_ID = "AW-17656232046";
+  const ADS_LABEL_LEAD = process.env.NEXT_PUBLIC_ADS_CONV_LABEL_LEAD;
+  const SEND_TO_LEAD = makeAdsSendTo(ADS_ID, ADS_LABEL_LEAD);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,6 +40,10 @@ export default function Form() {
           company: "",
           message: "",
         });
+        try {
+          gaEvent("generate_lead", { method: "form", form_id: "contact_form" });
+          adsConversion(SEND_TO_LEAD, { value: 1.0, currency: "MXN" });
+        } catch {}
       } else {
         setStatus("error");
         setErrorMessage("Failed to send message. Please try again.");

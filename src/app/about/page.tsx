@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="pointer-events-none absolute inset-0 -z-10">
         <Image
           src={bgImage}
-          alt="Background"
+          alt=""
           fill
           priority
           className="object-cover object-center opacity-35"

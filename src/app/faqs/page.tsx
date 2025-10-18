@@ -7,6 +7,7 @@ import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import bgImage from "@/app/bg.png";
 import { HelpCircle, ChevronDown, MessageCircle } from "lucide-react";
+import Script from "next/script";
 
 export default function FAQsPage() {
   const { t } = useLanguage();
@@ -56,7 +57,7 @@ export default function FAQsPage() {
       <div className="pointer-events-none absolute inset-0 -z-10">
         <Image
           src={bgImage}
-          alt="Background"
+          alt=""
           fill
           priority
           className="object-cover object-center opacity-35"
@@ -67,6 +68,17 @@ export default function FAQsPage() {
       <Navbar />
 
       <div className="relative z-10 flex flex-col pt-24">
+        <Script id="ld-faq" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          })}
+        </Script>
         <section className="pb-24 px-8 md:px-12">
           <div className="max-w-5xl mx-auto space-y-16">
             <div className="text-center space-y-6">

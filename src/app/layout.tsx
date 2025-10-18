@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/overall/navbar";
+import CookieConsent from "@/components/overall/CookieConsent";
 import bgImage from "@/app/bg.png";
 
 const geistSans = Geist({
@@ -19,8 +20,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.artificialwebs.com"),
   title: "Artificial Webs México",
   description: "Desarrollamos sitios web profesionales",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "es-MX": "/",
+      "en-US": "/?lang=en",
+    },
+  },
+  openGraph: {
+    title: "Artificial Webs México",
+    description: "Desarrollamos sitios web profesionales",
+    url: "https://www.artificialwebs.com/",
+    siteName: "Artificial Webs",
+    images: [
+      { url: "/opengraph-image", width: 1200, height: 630 },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Artificial Webs México",
+    description: "Desarrollamos sitios web profesionales",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({
@@ -33,6 +59,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-slate-950`}
       >
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied'
+            });
+          `}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JJYNN7JM4S"
           strategy="afterInteractive"
@@ -44,14 +82,42 @@ export default function RootLayout({
             gtag('js', new Date());
 
             gtag('config', 'G-JJYNN7JM4S');
+            gtag('config', 'AW-17656232046');
           `}
+        </Script>
+        <Script id="ld-org-website" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "name": "Artificial Webs",
+                "url": "https://www.artificialwebs.com/",
+                "logo": "https://www.artificialwebs.com/vercel.svg",
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+52 624 239 2710",
+                    "contactType": "sales",
+                    "areaServed": "MX",
+                    "availableLanguage": ["es", "en"]
+                  }
+                ]
+              },
+              {
+                "@type": "WebSite",
+                "name": "Artificial Webs",
+                "url": "https://www.artificialwebs.com/"
+              }
+            ]
+          })}
         </Script>
         <LanguageProvider>
           <div className="relative min-h-screen overflow-hidden bg-white dark:bg-slate-950">
             <div className="pointer-events-none absolute inset-0 -z-10">
               <Image
                 src={bgImage}
-                alt="Fondo decorativo"
+                alt=""
                 fill
                 priority
                 className="object-cover object-center opacity-30"
@@ -80,6 +146,7 @@ export default function RootLayout({
             </div>
           </div>
         </LanguageProvider>
+        <CookieConsent />
       </body>
     </html>
   );

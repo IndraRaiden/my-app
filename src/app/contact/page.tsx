@@ -6,6 +6,7 @@ import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Form from "@/components/contact/form";
 import bgImage from "@/app/bg.png";
+import { gaEvent, adsConversion, makeAdsSendTo } from "@/lib/gtag";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -14,13 +15,18 @@ export default function ContactPage() {
     { display: "+52 624 239 2710", href: "tel:+526242392710" },
     { display: "+52 56 63 95 4818", href: "tel:+525663954818" },
   ];
+  const ADS_ID = "AW-17656232046";
+  const ADS_LABEL_WHATSAPP = process.env.NEXT_PUBLIC_ADS_CONV_LABEL_WHATSAPP;
+  const ADS_LABEL_CALL = process.env.NEXT_PUBLIC_ADS_CONV_LABEL_CALL;
+  const SEND_TO_WHATSAPP = makeAdsSendTo(ADS_ID, ADS_LABEL_WHATSAPP);
+  const SEND_TO_CALL = makeAdsSendTo(ADS_ID, ADS_LABEL_CALL);
 
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <Image
           src={bgImage}
-          alt="Background"
+          alt=""
           fill
           priority
           className="object-cover object-center opacity-35"
@@ -93,6 +99,10 @@ export default function ContactPage() {
                       href={`https://wa.me/${whatsappNumber}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => {
+                        gaEvent("contact_whatsapp_click", { location: "contact_page", number: whatsappNumber });
+                        adsConversion(SEND_TO_WHATSAPP);
+                      }}
                       className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/60 hover:text-emerald-200"
                     >
                       <MessageCircle className="w-4 h-4" />
@@ -102,6 +112,10 @@ export default function ContactPage() {
                       <a
                         key={phone.href}
                         href={phone.href}
+                        onClick={() => {
+                          gaEvent("contact_phone_click", { location: "contact_page", phone: phone.display });
+                          adsConversion(SEND_TO_CALL);
+                        }}
                         className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/60 hover:text-emerald-200"
                       >
                         <PhoneCall className="w-4 h-4" />

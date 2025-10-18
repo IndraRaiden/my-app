@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { gaEvent } from "@/lib/gtag";
 import logo from "@/app/logo.png";
 
 export default function Navbar() {
@@ -79,6 +80,7 @@ export default function Navbar() {
               </button>
               <Link
                 href="/contact"
+                onClick={() => gaEvent("select_content", { content_type: "cta_nav_get_started" })}
                 className="px-5 py-2 text-sm font-semibold text-white rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 shadow-lg shadow-emerald-500/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
               >
                 {t("nav.getStarted")}
@@ -125,6 +127,7 @@ export default function Navbar() {
             </button>
             <Link
               href="/contact"
+              onClick={() => gaEvent("select_content", { content_type: "cta_nav_get_started" })}
               className="w-full rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/40 text-center"
             >
               {t("nav.getStarted")}
