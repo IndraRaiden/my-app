@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ImageGalleryModalProps {
   isOpen: boolean;
   onClose: () => void;
-  images: string[];
+  images: (string | StaticImageData)[];
   projectTitle: string;
 }
 
@@ -87,7 +87,10 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
       {images.length > 1 && (
         <>
           <button
-            onClick={prevImage}
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
             className="absolute left-4 z-50 text-white hover:text-emerald-400 transition-colors bg-black/50 rounded-full p-3 hover:bg-black/70"
             aria-label="Previous image"
           >
@@ -106,7 +109,10 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
             </svg>
           </button>
           <button
-            onClick={nextImage}
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
             className="absolute right-4 z-50 text-white hover:text-emerald-400 transition-colors bg-black/50 rounded-full p-3 hover:bg-black/70"
             aria-label="Next image"
           >

@@ -6,6 +6,10 @@ import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Websites from "@/components/portfolio/Websites";
 import bg2 from "@/app/bg2.png";
+import idealAdapt1 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004519.png";
+import idealAdapt2 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004538.png";
+import idealAdapt3 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004607.png";
+import idealAdapt4 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004619.png";
 
 export default function PortfolioPage() {
   const { t } = useLanguage();
@@ -74,10 +78,15 @@ export default function PortfolioPage() {
     },
     {
       id: 6,
-      category: "Portfolio Website",
-      technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
-      galleryFolder: "",
-      images: [],
+      category: "Corporate Website",
+      technologies: ["WordPress", "PHP", "CSS"],
+      galleryFolder: "ideal adapt",
+      images: [
+        idealAdapt1,
+        idealAdapt2,
+        idealAdapt3,
+        idealAdapt4,
+      ],
     },
   ];
 

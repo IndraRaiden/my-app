@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import ImageGalleryModal from "./ImageGalleryModal";
 
 interface WebsiteCardProps {
@@ -10,7 +10,7 @@ interface WebsiteCardProps {
   technologies: string[];
   title: string;
   description: string;
-  images: string[];
+  images: (string | StaticImageData)[];
 }
 
 export default function Websites({ id, category, technologies, title, description, images }: WebsiteCardProps) {
