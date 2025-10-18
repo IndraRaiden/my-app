@@ -11,6 +11,7 @@ export default function CookieConsent() {
       if (!saved) setVisible(true);
     } catch {}
   }, []);
+  
 
   const updateConsent = (granted: boolean) => {
     try {
