@@ -27,10 +27,10 @@ export default function Navbar() {
     }`;
 
   const mobileLinkClasses = (href: string) =>
-    `block rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+    `flex items-center gap-3 rounded-xl px-4 py-3 text-[0.95rem] font-medium border transition-all duration-200 ${
       pathname === href
-        ? "text-emerald-600 bg-emerald-50"
-        : "text-slate-600 hover:text-emerald-600 hover:bg-emerald-50"
+        ? "text-emerald-600 bg-emerald-50 border-emerald-200 shadow-inner shadow-emerald-100/60"
+        : "text-slate-600 border-transparent hover:border-emerald-200 hover:bg-emerald-50/60 hover:text-emerald-600"
     }`;
 
   useEffect(() => {
@@ -38,20 +38,25 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100/80 shadow-sm">
-      <div className="max-w-7xl mx-auto px-5 md:px-8">
-        <div className="flex items-center justify-between gap-6 py-3">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur md:backdrop-blur-sm border-b border-slate-200/70 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="flex items-center justify-between gap-4 py-3">
           {/* Logo/Brand */}
-          <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer">
             <Image
               src={logo}
               alt="Artificial Webs"
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-11 w-auto md:h-12 transition-transform duration-300 group-hover:scale-105"
               priority
             />
-            <span className="text-xl font-semibold tracking-tight text-emerald-700">
-              Artificial Webs
-            </span>
+            <div className="flex items-baseline gap-1">
+              <span className="text-lg md:text-xl font-semibold tracking-tight text-emerald-700">
+                Artificial Webs
+              </span>
+              <span className="text-sm md:text-base font-semibold text-slate-900">
+                México
+              </span>
+            </div>
           </Link>
 
           {/* Navigation Links */}
@@ -80,7 +85,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-500 rounded-lg transition-colors hover:text-emerald-600 hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/30"
+            className="md:hidden p-2 text-slate-500 rounded-xl border border-transparent transition-all duration-200 hover:text-emerald-600 hover:border-emerald-200 hover:bg-emerald-50/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/30"
             aria-label="Toggle navigation"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -96,10 +101,10 @@ export default function Navbar() {
         </div>
         <div
           className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-64" : "max-h-0"
+            isMenuOpen ? "max-h-[28rem]" : "max-h-0"
           }`}
         >
-          <div className="flex flex-col rounded-xl border border-slate-200 bg-white/95 shadow-sm backdrop-blur px-4 py-3 space-y-1">
+          <div className="mt-2 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/98 shadow-lg shadow-emerald-100/60 backdrop-blur px-4 py-4">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className={mobileLinkClasses(link.href)}>
                 {t(link.key)}
@@ -107,7 +112,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={toggleLanguage}
-              className="mt-2 flex items-center justify-center gap-2 rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-emerald-600 hover:border-emerald-400"
+              className="flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-emerald-600 hover:border-emerald-400"
               title={language === "es" ? "Switch to English" : "Cambiar a Español"}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +120,7 @@ export default function Navbar() {
               </svg>
               {language === "es" ? "EN" : "ES"}
             </button>
-            <button className="w-full rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-emerald-600">
+            <button className="w-full rounded-xl bg-emerald-500/90 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-emerald-500 hover:shadow-lg hover:shadow-emerald-200/60">
               {t("nav.getStarted")}
             </button>
           </div>
