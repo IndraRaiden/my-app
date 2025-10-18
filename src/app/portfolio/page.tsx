@@ -6,10 +6,28 @@ import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Websites from "@/components/portfolio/Websites";
 import bg2 from "@/app/bg2.png";
-import idealAdapt1 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004519.png";
-import idealAdapt2 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004538.png";
-import idealAdapt3 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004607.png";
-import idealAdapt4 from "@/app/assets/gallery/ideal adapt/Captura de pantalla 2025-10-18 004619.png";
+import baby1 from "@/app/assets/gallery/baby/Captura de pantalla 2025-10-17 234935.webp";
+import baby2 from "@/app/assets/gallery/baby/Captura de pantalla 2025-10-17 235012 - copia.webp";
+import baby3 from "@/app/assets/gallery/baby/Captura de pantalla 2025-10-17 235032 - copia.webp";
+import baby4 from "@/app/assets/gallery/baby/Captura de pantalla 2025-10-17 235043 - copia.webp";
+import gaby1 from "@/app/assets/gallery/gaby/Captura de pantalla 2025-10-17 233125.webp";
+import gaby2 from "@/app/assets/gallery/gaby/Captura de pantalla 2025-10-17 233148.webp";
+import gaby3 from "@/app/assets/gallery/gaby/Captura de pantalla 2025-10-17 233328.webp";
+import oma1 from "@/app/assets/gallery/oma/Captura de pantalla 2025-10-17 233823.webp";
+import oma2 from "@/app/assets/gallery/oma/Captura de pantalla 2025-10-17 233914.webp";
+import oma3 from "@/app/assets/gallery/oma/Captura de pantalla 2025-10-17 233931.webp";
+import piedras1 from "@/app/assets/gallery/piedras/Captura de pantalla 2025-10-17 235941 - copia (2).webp";
+import piedras2 from "@/app/assets/gallery/piedras/Captura de pantalla 2025-10-18 000001 - copia - copia.webp";
+import piedras3 from "@/app/assets/gallery/piedras/Captura de pantalla 2025-10-18 000029 - copia - copia.webp";
+import piedras4 from "@/app/assets/gallery/piedras/Captura de pantalla 2025-10-18 000238 - copia - copia.webp";
+import piedras5 from "@/app/assets/gallery/piedras/Captura de pantalla 2025-10-18 000251 - copia - copia.webp";
+import transparencia1 from "@/app/assets/gallery/transparencia/Captura de pantalla 2025-10-17 235243 - copia.webp";
+import transparencia2 from "@/app/assets/gallery/transparencia/Captura de pantalla 2025-10-17 235318 - copia.webp";
+import transparencia3 from "@/app/assets/gallery/transparencia/Captura de pantalla 2025-10-17 235326 - copia.webp";
+import transparencia4 from "@/app/assets/gallery/transparencia/Captura de pantalla 2025-10-17 235335 - copia.webp";
+import idealAdapt1 from "@/app/assets/gallery/ideal adapt/Captura-de-pantalla-2025-10-18-004519-copia-copia-copia.webp";
+import idealAdapt2 from "@/app/assets/gallery/ideal adapt/Captura-de-pantalla-2025-10-18-004538-copia-copia-copia.webp";
+import idealAdapt3 from "@/app/assets/gallery/ideal adapt/Captura-de-pantalla-2025-10-18-004607-copia.webp";
 
 export default function PortfolioPage() {
   const { t } = useLanguage();
@@ -20,73 +38,42 @@ export default function PortfolioPage() {
       category: "E-Commerce",
       technologies: ["Next.js", "Stripe", "Tailwind CSS"],
       galleryFolder: "baby",
-      images: [
-        "/gallery/baby/Captura de pantalla 2025-10-17 234935.png",
-        "/gallery/baby/Captura de pantalla 2025-10-17 234954.png",
-        "/gallery/baby/Captura de pantalla 2025-10-17 235012.png",
-        "/gallery/baby/Captura de pantalla 2025-10-17 235032.png",
-        "/gallery/baby/Captura de pantalla 2025-10-17 235043.png",
-      ],
+      images: [baby1, baby2, baby3, baby4],
     },
     {
       id: 2,
       category: "Corporate Website",
       technologies: ["React", "TypeScript", "Node.js"],
       galleryFolder: "gaby",
-      images: [
-        "/gallery/gaby/Captura de pantalla 2025-10-17 233125.png",
-        "/gallery/gaby/Captura de pantalla 2025-10-17 233148.png",
-        "/gallery/gaby/Captura de pantalla 2025-10-17 233328.png",
-      ],
+      images: [gaby1, gaby2, gaby3],
     },
     {
       id: 3,
       category: "Web Application",
       technologies: ["Next.js", "PostgreSQL", "Prisma"],
       galleryFolder: "oma",
-      images: [
-        "/gallery/oma/Captura de pantalla 2025-10-17 233823.png",
-        "/gallery/oma/Captura de pantalla 2025-10-17 233914.png",
-        "/gallery/oma/Captura de pantalla 2025-10-17 233931.png",
-        "/gallery/oma/Captura de pantalla 2025-10-17 234007.png",
-      ],
+      images: [oma1, oma2, oma3],
     },
     {
       id: 4,
       category: "Landing Page",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       galleryFolder: "piedras",
-      images: [
-        "/gallery/piedras/Captura de pantalla 2025-10-17 235941.png",
-        "/gallery/piedras/Captura de pantalla 2025-10-18 000001.png",
-        "/gallery/piedras/Captura de pantalla 2025-10-18 000029.png",
-        "/gallery/piedras/Captura de pantalla 2025-10-18 000238.png",
-        "/gallery/piedras/Captura de pantalla 2025-10-18 000251.png",
-      ],
+      images: [piedras1, piedras2, piedras3, piedras4, piedras5],
     },
     {
       id: 5,
       category: "Dashboard",
       technologies: ["React", "Chart.js", "Express"],
       galleryFolder: "transparencia",
-      images: [
-        "/gallery/transparencia/Captura de pantalla 2025-10-17 235243.png",
-        "/gallery/transparencia/Captura de pantalla 2025-10-17 235318.png",
-        "/gallery/transparencia/Captura de pantalla 2025-10-17 235326.png",
-        "/gallery/transparencia/Captura de pantalla 2025-10-17 235335.png",
-      ],
+      images: [transparencia1, transparencia2, transparencia3, transparencia4],
     },
     {
       id: 6,
       category: "Corporate Website",
       technologies: ["WordPress", "PHP", "CSS"],
       galleryFolder: "ideal adapt",
-      images: [
-        idealAdapt1,
-        idealAdapt2,
-        idealAdapt3,
-        idealAdapt4,
-      ],
+      images: [idealAdapt1, idealAdapt2, idealAdapt3],
     },
   ];
 
