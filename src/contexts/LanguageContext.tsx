@@ -44,6 +44,7 @@ const translations: Record<Language, Record<string, string>> = {
   es: {
     // Navbar
     "nav.about": "Acerca de",
+    "nav.portfolio": "Portafolio",
     "nav.faqs": "Preguntas Frecuentes",
     "nav.contact": "Contacto",
     "nav.getStarted": "Comenzar",
@@ -195,10 +196,33 @@ const translations: Record<Language, Record<string, string>> = {
     "faqs.ctaTitle": "¿Aún tienes preguntas?",
     "faqs.ctaDesc": "¿No encuentras la respuesta que buscas? Nos encantaría saber de ti.",
     "faqs.ctaButton": "Ponte en Contacto",
+
+    // Portfolio Page
+    "portfolio.badge": "Nuestro Portafolio",
+    "portfolio.title": "Proyectos que",
+    "portfolio.titleHighlight": "Impulsan Resultados",
+    "portfolio.subtitle":
+      "Explora nuestra colección de proyectos exitosos. Cada uno diseñado y desarrollado con pasión, precisión y las últimas tecnologías web.",
+    "portfolio.project1Title": "Tienda de Moda",
+    "portfolio.project1Desc": "Plataforma de e-commerce completa con carrito de compras, pagos integrados y gestión de inventario en tiempo real.",
+    "portfolio.project2Title": "Sitio Corporativo",
+    "portfolio.project2Desc": "Sitio web empresarial moderno con diseño responsivo, CMS personalizado y optimización SEO avanzada.",
+    "portfolio.project3Title": "Sistema de Gestión",
+    "portfolio.project3Desc": "Aplicación web robusta para gestión de proyectos con autenticación, roles y reportes en tiempo real.",
+    "portfolio.project4Title": "Landing Startup",
+    "portfolio.project4Desc": "Página de aterrizaje de alto impacto con animaciones fluidas y diseño orientado a conversión.",
+    "portfolio.project5Title": "Panel Analytics",
+    "portfolio.project5Desc": "Dashboard interactivo con visualización de datos, gráficos dinámicos y exportación de reportes.",
+    "portfolio.project6Title": "Portafolio Creativo",
+    "portfolio.project6Desc": "Portafolio minimalista para profesional creativo con galería interactiva y CMS headless.",
+    "portfolio.ctaTitle": "¿Listo para iniciar tu proyecto?",
+    "portfolio.ctaDesc": "Trabajemos juntos para crear algo increíble. Contáctanos hoy para una consulta gratuita.",
+    "portfolio.ctaButton": "Iniciar Proyecto",
   },
   en: {
     // Navbar
     "nav.about": "About",
+    "nav.portfolio": "Portfolio",
     "nav.faqs": "FAQs",
     "nav.contact": "Contact",
     "nav.getStarted": "Get Started",
@@ -350,5 +374,27 @@ const translations: Record<Language, Record<string, string>> = {
     "faqs.ctaTitle": "Still have questions?",
     "faqs.ctaDesc": "Can't find the answer you're looking for? We'd love to hear from you.",
     "faqs.ctaButton": "Get In Touch",
+
+    // Portfolio Page
+    "portfolio.badge": "Our Portfolio",
+    "portfolio.title": "Projects that",
+    "portfolio.titleHighlight": "Drive Results",
+    "portfolio.subtitle":
+      "Explore our collection of successful projects. Each one designed and developed with passion, precision, and the latest web technologies.",
+    "portfolio.project1Title": "Fashion Store",
+    "portfolio.project1Desc": "Complete e-commerce platform with shopping cart, integrated payments, and real-time inventory management.",
+    "portfolio.project2Title": "Corporate Website",
+    "portfolio.project2Desc": "Modern business website with responsive design, custom CMS, and advanced SEO optimization.",
+    "portfolio.project3Title": "Management System",
+    "portfolio.project3Desc": "Robust web application for project management with authentication, roles, and real-time reporting.",
+    "portfolio.project4Title": "Startup Landing",
+    "portfolio.project4Desc": "High-impact landing page with smooth animations and conversion-focused design.",
+    "portfolio.project5Title": "Analytics Dashboard",
+    "portfolio.project5Desc": "Interactive dashboard with data visualization, dynamic charts, and report export.",
+    "portfolio.project6Title": "Creative Portfolio",
+    "portfolio.project6Desc": "Minimalist portfolio for creative professional with interactive gallery and headless CMS.",
+    "portfolio.ctaTitle": "Ready to start your project?",
+    "portfolio.ctaDesc": "Let's work together to create something amazing. Contact us today for a free consultation.",
+    "portfolio.ctaButton": "Start Project",
   },
 };

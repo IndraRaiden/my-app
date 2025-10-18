@@ -14,6 +14,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/about", key: "nav.about" as const },
+    { href: "/portfolio", key: "nav.portfolio" as const },
     { href: "/faqs", key: "nav.faqs" as const },
     { href: "/contact", key: "nav.contact" as const },
   ];
