@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Websites from "@/components/portfolio/Websites";
 
 export default function PortfolioPage() {
   const { t } = useLanguage();
@@ -12,31 +13,69 @@ export default function PortfolioPage() {
       id: 1,
       category: "E-Commerce",
       technologies: ["Next.js", "Stripe", "Tailwind CSS"],
+      galleryFolder: "baby",
+      images: [
+        "/gallery/baby/Captura de pantalla 2025-10-17 234935.png",
+        "/gallery/baby/Captura de pantalla 2025-10-17 234954.png",
+        "/gallery/baby/Captura de pantalla 2025-10-17 235012.png",
+        "/gallery/baby/Captura de pantalla 2025-10-17 235032.png",
+        "/gallery/baby/Captura de pantalla 2025-10-17 235043.png",
+      ],
     },
     {
       id: 2,
       category: "Corporate Website",
       technologies: ["React", "TypeScript", "Node.js"],
+      galleryFolder: "gaby",
+      images: [
+        "/gallery/gaby/Captura de pantalla 2025-10-17 233125.png",
+        "/gallery/gaby/Captura de pantalla 2025-10-17 233148.png",
+        "/gallery/gaby/Captura de pantalla 2025-10-17 233328.png",
+      ],
     },
     {
       id: 3,
       category: "Web Application",
       technologies: ["Next.js", "PostgreSQL", "Prisma"],
+      galleryFolder: "oma",
+      images: [
+        "/gallery/oma/Captura de pantalla 2025-10-17 233823.png",
+        "/gallery/oma/Captura de pantalla 2025-10-17 233914.png",
+        "/gallery/oma/Captura de pantalla 2025-10-17 233931.png",
+        "/gallery/oma/Captura de pantalla 2025-10-17 234007.png",
+      ],
     },
     {
       id: 4,
       category: "Landing Page",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      galleryFolder: "piedras",
+      images: [
+        "/gallery/piedras/Captura de pantalla 2025-10-17 235941.png",
+        "/gallery/piedras/Captura de pantalla 2025-10-18 000001.png",
+        "/gallery/piedras/Captura de pantalla 2025-10-18 000029.png",
+        "/gallery/piedras/Captura de pantalla 2025-10-18 000238.png",
+        "/gallery/piedras/Captura de pantalla 2025-10-18 000251.png",
+      ],
     },
     {
       id: 5,
       category: "Dashboard",
       technologies: ["React", "Chart.js", "Express"],
+      galleryFolder: "transparencia",
+      images: [
+        "/gallery/transparencia/Captura de pantalla 2025-10-17 235243.png",
+        "/gallery/transparencia/Captura de pantalla 2025-10-17 235318.png",
+        "/gallery/transparencia/Captura de pantalla 2025-10-17 235326.png",
+        "/gallery/transparencia/Captura de pantalla 2025-10-17 235335.png",
+      ],
     },
     {
       id: 6,
       category: "Portfolio Website",
       technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
+      galleryFolder: "",
+      images: [],
     },
   ];
 
@@ -73,56 +112,15 @@ export default function PortfolioPage() {
             {/* Portfolio Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {projects.map((project) => (
-                <div
+                <Websites
                   key={project.id}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-500/30 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  {/* Project Image Placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-white/5 backdrop-blur-sm flex items-center justify-center">
-                      <svg
-                        className="w-16 h-16 text-emerald-400/50 group-hover:text-emerald-400 transition-colors duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  {/* Project Info */}
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-emerald-400 font-medium">
-                        {t(`portfolio.project${project.id}Title`)}
-                      </span>
-                      <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">
-                        {project.category}
-                      </span>
-                    </div>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {t(`portfolio.project${project.id}Desc`)}
-                    </p>
-                    
-                    {/* Technologies */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded border border-white/10"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                  id={project.id}
+                  category={project.category}
+                  technologies={project.technologies}
+                  title={t(`portfolio.project${project.id}Title`)}
+                  description={t(`portfolio.project${project.id}Desc`)}
+                  images={project.images}
+                />
               ))}
             </div>
 
