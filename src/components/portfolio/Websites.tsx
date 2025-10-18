@@ -20,7 +20,7 @@ export default function Websites({ id, category, technologies, title, descriptio
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-500/30 transition-all duration-300 group hover:transform hover:scale-105 cursor-pointer"
+        className="bg-white rounded-2xl overflow-hidden border border-emerald-200/60 shadow-lg shadow-emerald-100/40 transition-transform duration-300 group hover:-translate-y-1 cursor-pointer"
       >
         {/* Project Image */}
         <div className="h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 relative overflow-hidden">
@@ -60,24 +60,24 @@ export default function Websites({ id, category, technologies, title, descriptio
         
         {/* Project Info */}
         <div className="p-6">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-sm text-emerald-400 font-medium">
+          <div className="flex items-center justify-between mb-4">
+            <span className="text-sm text-emerald-600 font-semibold">
               {title}
             </span>
-            <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">
+            <span className="text-xs text-emerald-700 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200/70">
               {category}
             </span>
           </div>
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-slate-600 text-sm leading-relaxed mb-5">
             {description}
           </p>
-          
+
           {/* Technologies */}
           <div className="flex flex-wrap gap-2">
             {technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded border border-white/10"
+                className="text-xs font-medium text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60"
               >
                 {tech}
               </span>

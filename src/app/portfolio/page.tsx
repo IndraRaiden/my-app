@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Websites from "@/components/portfolio/Websites";
+import bg2 from "@/app/bg2.png";
 
 export default function PortfolioPage() {
   const { t } = useLanguage();
@@ -80,59 +82,67 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 relative overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-transparent"></div>
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-emerald-500/30 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-400/20 rounded-full blur-[100px]"></div>
-      
-      {/* Navigation */}
+    <div className="relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-white to-slate-100"></div>
+      <div className="absolute -top-32 -left-20 h-72 w-72 rounded-full bg-emerald-100/60 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-teal-100/40 blur-3xl"></div>
+
       <Navbar />
-      
-      {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col pt-20">
-        <section className="py-24 px-8">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+
+      <div className="relative z-10 flex flex-col pt-28 pb-24 px-6 md:px-12">
+        <section className="max-w-6xl mx-auto w-full">
+          <div className="relative">
+            <div className="pointer-events-none absolute -right-24 -top-20 hidden xl:block w-[520px] opacity-90 rotate-3">
+              <Image
+                src={bg2}
+                alt="Decorative"
+                className="w-full h-auto rounded-3xl border border-emerald-200/50 shadow-xl shadow-emerald-100/50"
+                priority
+              />
+            </div>
+
+            <div className="text-left max-w-3xl mb-16 animate-fade-up">
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-500/80">
                 {t("portfolio.badge")}
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                {t("portfolio.title")}{" "}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                {t("portfolio.title")} {" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
                   {t("portfolio.titleHighlight")}
                 </span>
               </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl">
                 {t("portfolio.subtitle")}
               </p>
             </div>
+          </div>
 
-            {/* Portfolio Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {projects.map((project) => (
-                <Websites
-                  key={project.id}
-                  id={project.id}
-                  category={project.category}
-                  technologies={project.technologies}
-                  title={t(`portfolio.project${project.id}Title`)}
-                  description={t(`portfolio.project${project.id}Desc`)}
-                  images={project.images}
-                />
-              ))}
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {projects.map((project) => (
+              <Websites
+                key={project.id}
+                id={project.id}
+                category={project.category}
+                technologies={project.technologies}
+                title={t(`portfolio.project${project.id}Title`)}
+                description={t(`portfolio.project${project.id}Desc`)}
+                images={project.images}
+              />
+            ))}
+          </div>
 
-            {/* CTA Section */}
-            <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="mt-16 pt-16 border-t border-emerald-200/40 text-center">
+            <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
+              <h2 className="text-3xl font-bold text-slate-900">
                 {t("portfolio.ctaTitle")}
               </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                 {t("portfolio.ctaDesc")}
               </p>
-              <Link href="/contact" className="inline-block px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/30"
+              >
                 {t("portfolio.ctaButton")}
               </Link>
             </div>

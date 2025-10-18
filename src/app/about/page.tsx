@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import bgImage from "@/app/bg.png";
@@ -135,9 +136,12 @@ export default function AboutPage() {
                     {t("aboutPage.teamDesc")}
                   </p>
                 </div>
-                <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30">
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30"
+                >
                   {t("aboutPage.joinTeam")}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

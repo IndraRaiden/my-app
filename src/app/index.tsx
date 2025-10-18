@@ -1,3 +1,4 @@
+import Link from "next/link";
 import One from "@/components/index/one";
 import Two from "@/components/index/two";
 import Three from "@/components/index/three";
@@ -20,6 +21,18 @@ export default function Home() {
 
         {/* Services Section */}
         <Three />
+
+        <footer className="mt-16 mb-10 px-6">
+          <div className="max-w-6xl mx-auto rounded-2xl border border-emerald-500/20 bg-slate-950/80 text-slate-200 px-6 py-5 text-center shadow-lg shadow-emerald-500/10">
+            <p className="text-sm sm:text-base">
+              No tenemos footer, gracias por leer, contactanos!
+              {" "}
+              <Link href="/contact" className="text-emerald-300 font-semibold hover:text-emerald-200 transition-colors">
+                Aquí
+              </Link>
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );

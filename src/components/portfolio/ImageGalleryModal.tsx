@@ -40,7 +40,10 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+      onClick={onClose}
+    >
       {/* Close button */}
       <button
         onClick={onClose}
@@ -59,6 +62,16 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
             strokeWidth={2}
             d="M6 18L18 6M6 6l12 12"
           />
+        </svg>
+      </button>
+
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-16 sm:right-24 z-50 inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/20 px-5 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/35 hover:text-emerald-200"
+      >
+        <span>Cerrar</span>
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
@@ -115,8 +128,11 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
       )}
 
       {/* Image display */}
-      <div className="relative w-full h-full max-w-7xl max-h-[90vh] mx-auto px-20 py-20 flex items-center justify-center">
-        <div className="relative w-full h-full">
+      <div
+        className="relative mx-auto w-full max-w-6xl px-6 sm:px-12"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative w-full h-[60vh] sm:h-[70vh] rounded-3xl border border-white/20 bg-black/40 overflow-hidden">
           <Image
             src={images[currentIndex]}
             alt={`${projectTitle} screenshot ${currentIndex + 1}`}
@@ -130,7 +146,10 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
 
       {/* Thumbnail navigation */}
       {images.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 max-w-full overflow-x-auto px-4">
+        <div
+          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 max-w-full overflow-x-auto px-4"
+          onClick={(e) => e.stopPropagation()}
+        >
           {images.map((img, idx) => (
             <button
               key={idx}
@@ -153,12 +172,6 @@ export default function ImageGalleryModal({ isOpen, onClose, images, projectTitl
         </div>
       )}
 
-      {/* Click outside to close */}
-      <div
-        className="absolute inset-0 -z-10"
-        onClick={onClose}
-        aria-label="Close gallery"
-      />
     </div>
   );
 }

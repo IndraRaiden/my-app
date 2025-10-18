@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Zap, Users, CheckCircle } from "lucide-react";
 import bg2 from "@/app/bg2.png";
@@ -14,7 +15,7 @@ export default function Two() {
       <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-teal-100/40 blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="pointer-events-none absolute -right-24 top-24 hidden lg:block w-[520px] opacity-100 rotate-3">
+        <div className="pointer-events-none absolute -right-16 top-16 hidden lg:block w-[520px] opacity-100 rotate-3">
           <Image
             src={bg2}
             alt="Decorative"
@@ -34,6 +35,15 @@ export default function Two() {
           <p className="text-base md:text-lg text-slate-600 leading-relaxed animate-fade-up-delay-2">
             {t("about.description1")}
           </p>
+        </div>
+
+        <div className="relative mb-12 flex justify-center lg:hidden">
+          <Image
+            src={bg2}
+            alt="Decorative"
+            className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl rounded-3xl border border-emerald-200/50 shadow-xl shadow-emerald-100/50 rotate-2"
+            priority
+          />
         </div>
 
         {/* Feature grid */}
@@ -71,12 +81,18 @@ export default function Two() {
           <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
             <p className="text-base text-slate-600 leading-relaxed mb-8">{t("about.description2")}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40">
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
+              >
                 {t("about.ourStory")}
-              </button>
-              <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-slate-700 border border-emerald-200/60 rounded-full bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-400/70 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/30">
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-slate-700 border border-emerald-200/60 rounded-full bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-400/70 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/30"
+              >
                 {t("about.meetTeam")}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

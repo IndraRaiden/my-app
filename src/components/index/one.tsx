@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/app/hero.png";
 import bgImage from "@/app/bg.png";
@@ -37,12 +38,18 @@ export default function One() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up-delay-3">
-              <button className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white bg-emerald-600 rounded-md transition-transform duration-200 hover:-translate-y-1 hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white bg-emerald-600 rounded-md transition-transform duration-200 hover:-translate-y-1 hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              >
                 {t("hero.getStarted")}
-              </button>
-              <button className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-slate-200 border border-slate-700 rounded-md transition-colors duration-200 hover:border-slate-600 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-slate-200 border border-slate-700 rounded-md transition-colors duration-200 hover:border-slate-600 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+              >
                 {t("hero.learnMore")}
-              </button>
+              </Link>
             </div>
           </div>
 
