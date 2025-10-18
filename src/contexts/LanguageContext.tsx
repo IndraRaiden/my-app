@@ -49,13 +49,24 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.getStarted": "Comenzar",
 
     // Hero Section
-    "hero.badge": "Estudio de Desarrollo Web",
-    "hero.title": "Creamos Sitios Web",
-    "hero.titleHighlight": "Extraordinarios",
+    "hero.badge": "Desarrollo Web Profesional",
+    "hero.title": "Soluciones digitales que impulsan tu negocio",
     "hero.subtitle":
-      "En Artificial Webs transformamos tu visión en experiencias digitales impactantes que conectan con tu audiencia",
-    "hero.getStarted": "Comenzar Proyecto",
-    "hero.learnMore": "Ver Portfolio",
+      "Desarrollamos plataformas web robustas y escalables con tecnologías de vanguardia. Más de 5 años entregando resultados medibles para empresas en crecimiento.",
+    "hero.getStarted": "Solicitar Consultoría",
+    "hero.learnMore": "Ver Casos de Éxito",
+    "hero.yearsExperience": "Años de experiencia",
+    "hero.projectsDelivered": "Proyectos completados",
+    "hero.clientRetention": "Retención de clientes",
+    "hero.serviceOverview": "Servicios Profesionales",
+    "hero.professional": "Certificado",
+    "hero.feature1Title": "Arquitectura Escalable",
+    "hero.feature1Desc": "Sistemas diseñados para crecer con tu negocio",
+    "hero.feature2Title": "Rendimiento Optimizado",
+    "hero.feature2Desc": "Tiempos de carga inferiores a 2 segundos",
+    "hero.feature3Title": "Soporte Continuo",
+    "hero.feature3Desc": "Mantenimiento y actualizaciones garantizadas",
+    "hero.certifiedNote": "Certificados en las principales tecnologías web modernas y mejores prácticas de la industria.",
 
     // About Section
     "about.badge": "Acerca de Artificial Webs",
@@ -193,13 +204,24 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.getStarted": "Get Started",
 
     // Hero Section
-    "hero.badge": "Web Development Studio",
-    "hero.title": "We Create",
-    "hero.titleHighlight": "Extraordinary Websites",
+    "hero.badge": "Professional Web Development",
+    "hero.title": "Digital solutions that drive your business forward",
     "hero.subtitle":
-      "At Artificial Webs, we transform your vision into impactful digital experiences that connect with your audience",
-    "hero.getStarted": "Start Your Project",
-    "hero.learnMore": "View Portfolio",
+      "We build robust and scalable web platforms with cutting-edge technologies. Over 5 years delivering measurable results for growing businesses.",
+    "hero.getStarted": "Request Consultation",
+    "hero.learnMore": "View Case Studies",
+    "hero.yearsExperience": "Years of experience",
+    "hero.projectsDelivered": "Projects completed",
+    "hero.clientRetention": "Client retention",
+    "hero.serviceOverview": "Professional Services",
+    "hero.professional": "Certified",
+    "hero.feature1Title": "Scalable Architecture",
+    "hero.feature1Desc": "Systems designed to grow with your business",
+    "hero.feature2Title": "Optimized Performance",
+    "hero.feature2Desc": "Load times under 2 seconds guaranteed",
+    "hero.feature3Title": "Continuous Support",
+    "hero.feature3Desc": "Maintenance and updates included",
+    "hero.certifiedNote": "Certified in leading modern web technologies and industry best practices.",
 
     // About Section
     "about.badge": "About Artificial Webs",
