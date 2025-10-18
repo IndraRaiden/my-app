@@ -46,7 +46,7 @@ export default function One() {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:-mt-2 animate-fade-in">
+          <div className="mt-12 lg:-mt-2 animate-fade-in">
             <div className="relative">
               <div className="hero-overlay absolute -top-24 -right-16 w-[360px] h-[220px] rounded-3xl overflow-hidden border border-emerald-500/30 shadow-2xl shadow-emerald-500/25 ring-1 ring-emerald-500/30 backdrop-blur-sm">
                 <Image

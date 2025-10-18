@@ -56,107 +56,109 @@ export default function Form() {
   };
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
-      {status === "success" && (
-        <div className="mb-6 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg">
-          <p className="text-emerald-400 font-medium">
+    <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-8 shadow-2xl shadow-emerald-500/10 transition-transform duration-300 hover:-translate-y-1">
+      <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 opacity-60" />
+      <div className="absolute -right-24 -top-20 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl" />
+      <div className="absolute -left-24 bottom-0 h-48 w-48 rounded-full bg-emerald-500/10 blur-3xl" />
+
+      <div className="relative">
+        {status === "success" && (
+          <div className="mb-6 rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-4 text-sm font-medium text-emerald-200">
             ✓ Message sent successfully! We'll get back to you soon.
-          </p>
-        </div>
-      )}
-      
-      {status === "error" && (
-        <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
-          <p className="text-red-400 font-medium">
+          </div>
+        )}
+
+        {status === "error" && (
+          <div className="mb-6 rounded-xl border border-red-500/40 bg-red-500/10 p-4 text-sm font-medium text-red-200">
             ✗ {errorMessage}
-          </p>
-        </div>
-      )}
-      
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-300 mb-2"
-          >
-            {t("contact.nameLabel")}
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-            placeholder={t("contact.namePlaceholder")}
-          />
-        </div>
+          </div>
+        )}
 
-        <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-300 mb-2"
-          >
-            {t("contact.emailLabel")}
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-            placeholder={t("contact.emailPlaceholder")}
-          />
-        </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold text-slate-200 mb-2 tracking-wide"
+            >
+              {t("contact.nameLabel")}
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full rounded-xl border border-emerald-500/10 bg-slate-900/60 px-4 py-3 text-white placeholder-slate-500 shadow-inner focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 transition-all"
+              placeholder={t("contact.namePlaceholder")}
+            />
+          </div>
 
-        <div>
-          <label
-            htmlFor="company"
-            className="block text-sm font-medium text-gray-300 mb-2"
-          >
-            {t("contact.companyLabel")}
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-            placeholder={t("contact.companyPlaceholder")}
-          />
-        </div>
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold text-slate-200 mb-2 tracking-wide"
+            >
+              {t("contact.emailLabel")}
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full rounded-xl border border-emerald-500/10 bg-slate-900/60 px-4 py-3 text-white placeholder-slate-500 shadow-inner focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 transition-all"
+              placeholder={t("contact.emailPlaceholder")}
+            />
+          </div>
 
-        <div>
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-300 mb-2"
-          >
-            {t("contact.messageLabel")}
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows={5}
-            className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-            placeholder={t("contact.messagePlaceholder")}
-          />
-        </div>
+          <div>
+            <label
+              htmlFor="company"
+              className="block text-sm font-semibold text-slate-200 mb-2 tracking-wide"
+            >
+              {t("contact.companyLabel")}
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-emerald-500/10 bg-slate-900/60 px-4 py-3 text-white placeholder-slate-500 shadow-inner focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 transition-all"
+              placeholder={t("contact.companyPlaceholder")}
+            />
+          </div>
 
-        <button
-          type="submit"
-          disabled={status === "submitting"}
-          className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-        >
-          {status === "submitting" ? "Sending..." : t("contact.sendMessage")}
-        </button>
-      </form>
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold text-slate-200 mb-2 tracking-wide"
+            >
+              {t("contact.messageLabel")}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={5}
+              className="w-full rounded-xl border border-emerald-500/10 bg-slate-900/60 px-4 py-3 text-white placeholder-slate-500 shadow-inner focus:border-emerald-500/50 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 transition-all resize-none"
+              placeholder={t("contact.messagePlaceholder")}
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === "submitting"}
+            className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/40 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
+          >
+            {status === "submitting" ? "Sending..." : t("contact.sendMessage")}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

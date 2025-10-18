@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
+import bgImage from "@/app/bg.png";
+import { HelpCircle, ChevronDown, MessageCircle } from "lucide-react";
 
 export default function FAQsPage() {
   const { t } = useLanguage();
@@ -49,91 +53,96 @@ export default function FAQsPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-transparent"></div>
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-emerald-500/30 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-400/20 rounded-full blur-[100px]"></div>
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <Image
+          src={bgImage}
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-center opacity-35"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/70 to-slate-950/90" />
+      </div>
 
-      {/* Navigation */}
       <Navbar />
 
-      {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col pt-20">
-        <section className="py-24 px-8">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+      <div className="relative z-10 flex flex-col pt-24">
+        <section className="pb-24 px-8 md:px-12">
+          <div className="max-w-5xl mx-auto space-y-16">
+            <div className="text-center space-y-6">
+              <span className="inline-flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300/80">
                 {t("faqs.badge")}
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                {t("faqs.title")}{" "}
+              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+                {t("faqs.title")} {" "}
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
                   {t("faqs.titleHighlight")}
                 </span>
               </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-300/85 max-w-2xl mx-auto">
                 {t("faqs.subtitle")}
               </p>
             </div>
 
-            {/* FAQs List */}
-            <div className="space-y-4">
+            <div className="space-y-5">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-emerald-500/30 transition-all duration-300 overflow-hidden"
+                  className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 shadow-lg shadow-emerald-500/10 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <button
+                    type="button"
                     onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors duration-200"
+                    aria-expanded={openIndex === index}
+                    className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left"
                   >
-                    <span className="text-lg font-semibold text-white pr-4">
-                      {faq.question}
-                    </span>
-                    <svg
-                      className={`w-5 h-5 text-emerald-400 transition-transform duration-300 flex-shrink-0 ${
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 ring-1 ring-emerald-500/40 text-emerald-300/90">
+                        <HelpCircle className="w-5 h-5" />
+                      </div>
+                      <span className="text-lg font-semibold text-white leading-tight">
+                        {faq.question}
+                      </span>
+                    </div>
+                    <ChevronDown
+                      className={`h-5 w-5 text-emerald-300/90 transition-transform duration-300 ${
                         openIndex === index ? "rotate-180" : ""
                       }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                    />
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      openIndex === index ? "max-h-96" : "max-h-0"
-                    }`}
+                    className={`px-6 pb-6 transition-all duration-300 ease-in-out ${
+                      openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    } overflow-hidden`}
                   >
-                    <div className="px-6 pb-5 text-gray-400 leading-relaxed">
+                    <p className="text-sm text-slate-300/85 leading-relaxed">
                       {faq.answer}
-                    </div>
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA Section */}
-            <div className="mt-16 text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-4">
-{t("faqs.ctaTitle")}
-              </h3>
-              <p className="text-gray-400 mb-6">
-{t("faqs.ctaDesc")}
-              </p>
-              <a
-                href="/contact"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105"
-              >
-                {t("faqs.ctaButton")}
-              </a>
+            <div className="mt-6 flex justify-center">
+              <div className="inline-flex flex-col sm:flex-row sm:items-center gap-5 p-6 rounded-2xl border border-emerald-500/20 bg-slate-950/85 shadow-lg shadow-emerald-500/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 ring-1 ring-emerald-500/40 text-emerald-300/90">
+                  <MessageCircle className="w-5 h-5" />
+                </div>
+                <div className="text-center sm:text-left space-y-2">
+                  <h3 className="text-2xl font-semibold text-white">
+                    {t("faqs.ctaTitle")}
+                  </h3>
+                  <p className="text-slate-300/85 text-sm md:text-base max-w-xl">
+                    {t("faqs.ctaDesc")}
+                  </p>
+                </div>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30"
+                >
+                  {t("faqs.ctaButton")}
+                </Link>
+              </div>
             </div>
           </div>
         </section>

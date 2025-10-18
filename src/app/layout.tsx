@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <LanguageProvider>
           <Navbar />
-          <main className="pt-10 md:pt-4">
+          <main className="pt-0 md:pt-4">
             {children}
           </main>
         </LanguageProvider>
