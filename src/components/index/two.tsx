@@ -1,95 +1,64 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Zap, Users, CheckCircle } from "lucide-react";
 
 export default function Two() {
   const { t } = useLanguage();
   return (
-    <section className="py-20 px-8 md:px-12">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div>
-            <h2 className="text-sm font-semibold text-emerald-400 mb-4 tracking-wider uppercase">
-              {t("about.badge")}
-            </h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              {t("about.title")}
-            </h3>
-            <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-              {t("about.description1")}
-            </p>
-            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-              {t("about.description2")}
-            </p>
-            <div className="flex gap-4">
-              <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300">
-                {t("about.ourStory")}
-              </button>
-              <button className="px-6 py-3 bg-white/5 backdrop-blur-sm text-white rounded-full font-semibold border border-white/10 hover:bg-white/10 transition-all duration-300">
-                {t("about.meetTeam")}
-              </button>
+    <section className="py-20 px-6 lg:px-16 bg-slate-100 border border-slate-200 rounded-xl shadow-sm">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-left max-w-3xl mb-16 animate-fade-up">
+          <h2 className="inline-block text-xs font-semibold uppercase tracking-wider text-emerald-600 border-l-2 border-emerald-500 pl-3 mb-4">
+            {t("about.badge")}
+          </h2>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6 animate-fade-up-delay">
+            {t("about.title")}
+          </h3>
+          <p className="text-base md:text-lg text-slate-600 leading-relaxed animate-fade-up-delay-2">
+            {t("about.description1")}
+          </p>
+        </div>
+
+        {/* Feature grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 animate-fade-in">
+          <div className="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-colors duration-200">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 ring-1 ring-emerald-200 text-emerald-600 flex items-center justify-center mb-4">
+              <Zap className="w-5 h-5" />
             </div>
+            <h4 className="text-lg font-semibold text-slate-900 mb-2">{t("about.innovation")}</h4>
+            <p className="text-slate-600 text-sm leading-relaxed">{t("about.innovationDesc")}</p>
           </div>
 
-          {/* Right Content - Feature Cards */}
-          <div className="grid gap-6">
-            <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-2">{t("about.innovation")}</h4>
-              <p className="text-gray-400">
-                {t("about.innovationDesc")}
-              </p>
+          <div className="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-colors duration-200">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 ring-1 ring-emerald-200 text-emerald-600 flex items-center justify-center mb-4">
+              <Users className="w-5 h-5" />
             </div>
+            <h4 className="text-lg font-semibold text-slate-900 mb-2">{t("about.clientCentered")}</h4>
+            <p className="text-slate-600 text-sm leading-relaxed">{t("about.clientDesc")}</p>
+          </div>
 
-            <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-2">{t("about.clientCentered")}</h4>
-              <p className="text-gray-400">
-                {t("about.clientDesc")}
-              </p>
+          <div className="p-6 rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 hover:shadow-lg transition-colors duration-200">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 ring-1 ring-emerald-200 text-emerald-600 flex items-center justify-center mb-4">
+              <CheckCircle className="w-5 h-5" />
             </div>
-
-            <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-2">{t("about.quality")}</h4>
-              <p className="text-gray-400">
-                {t("about.qualityDesc")}
-              </p>
-            </div>
+            <h4 className="text-lg font-semibold text-slate-900 mb-2">{t("about.quality")}</h4>
+            <p className="text-slate-600 text-sm leading-relaxed">{t("about.qualityDesc")}</p>
           </div>
         </div>
 
-        {/* Bottom Stats */}
-        <div className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">150+</div>
-              <div className="text-sm text-gray-500">{t("about.projects")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-teal-400 mb-2">75+</div>
-              <div className="text-sm text-gray-500">{t("about.clients")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">5+</div>
-              <div className="text-sm text-gray-500">{t("about.years")}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-teal-400 mb-2">98%</div>
-              <div className="text-sm text-gray-500">{t("about.satisfaction")}</div>
+        {/* Bottom CTA */}
+        <div className="mt-12 pt-12 border-t border-slate-200 text-center">
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
+            <p className="text-base text-slate-600 leading-relaxed mb-8">{t("about.description2")}</p>
+            <div className="flex gap-4">
+              <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-emerald-600 rounded-md transition-transform duration-200 hover:-translate-y-0.5 hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                {t("about.ourStory")}
+              </button>
+              <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-slate-800 bg-slate-200 border border-slate-300 rounded-md transition-colors duration-200 hover:bg-slate-300 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                {t("about.meetTeam")}
+              </button>
             </div>
           </div>
         </div>
@@ -97,3 +66,5 @@ export default function Two() {
     </section>
   );
 }
+
+
