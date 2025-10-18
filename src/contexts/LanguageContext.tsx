@@ -148,6 +148,8 @@ const translations: Record<Language, Record<string, string>> = {
       "Convertirnos en el estudio de desarrollo web preferido, reconocido por nuestra creatividad, calidad técnica y compromiso con el éxito de nuestros clientes.",
     "aboutPage.valuesTitle": "Nuestros",
     "aboutPage.valuesHighlight": "Valores",
+    "aboutPage.valuesSubtitle":
+      "Principios que guían cada proyecto, desde la innovación hasta la colaboración con nuestros clientes.",
     "aboutPage.innovationTitle": "Innovación",
     "aboutPage.innovationDesc":
       "Adoptamos las últimas tecnologías y tendencias para crear sitios web modernos y funcionales.",
@@ -326,6 +328,8 @@ const translations: Record<Language, Record<string, string>> = {
       "Become the preferred web development studio, recognized for our creativity, technical quality and commitment to our clients' success.",
     "aboutPage.valuesTitle": "Our Core",
     "aboutPage.valuesHighlight": "Values",
+    "aboutPage.valuesSubtitle":
+      "Principles that guide every project, from innovation to close collaboration with our clients.",
     "aboutPage.innovationTitle": "Innovation",
     "aboutPage.innovationDesc":
       "We embrace the latest technologies and trends to create modern and functional websites.",
