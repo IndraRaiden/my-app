@@ -20,7 +20,7 @@ export default function Websites({ id, category, technologies, title, descriptio
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className="bg-white rounded-2xl overflow-hidden border border-emerald-200/60 shadow-lg shadow-emerald-100/40 transition-transform duration-300 group hover:-translate-y-1 cursor-pointer"
+        className="bg-slate-900/70 rounded-2xl overflow-hidden border border-emerald-500/30 shadow-lg shadow-emerald-500/20 transition-transform duration-300 group hover:-translate-y-1 cursor-pointer"
       >
         {/* Project Image */}
         <div className="h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 relative overflow-hidden">
@@ -40,7 +40,7 @@ export default function Websites({ id, category, technologies, title, descriptio
               </div>
             </>
           ) : (
-            <div className="absolute inset-0 bg-white/5 backdrop-blur-sm flex items-center justify-center">
+            <div className="absolute inset-0 bg-slate-800/40 backdrop-blur-sm flex items-center justify-center">
               <svg
                 className="w-16 h-16 text-emerald-400/50 group-hover:text-emerald-400 transition-colors duration-300"
                 fill="none"
@@ -61,14 +61,14 @@ export default function Websites({ id, category, technologies, title, descriptio
         {/* Project Info */}
         <div className="p-6">
           <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-emerald-600 font-semibold">
+            <span className="text-sm text-emerald-200 font-semibold">
               {title}
             </span>
-            <span className="text-xs text-emerald-700 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200/70">
+            <span className="text-xs text-emerald-200/90 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30">
               {category}
             </span>
           </div>
-          <p className="text-slate-600 text-sm leading-relaxed mb-5">
+          <p className="text-slate-300 text-sm leading-relaxed mb-5">
             {description}
           </p>
 
@@ -77,7 +77,7 @@ export default function Websites({ id, category, technologies, title, descriptio
             {technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="text-xs font-medium text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60"
+                className="text-xs font-medium text-emerald-200 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30"
               >
                 {tech}
               </span>
