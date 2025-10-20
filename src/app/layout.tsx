@@ -55,9 +55,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="bg-slate-950">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-slate-950`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-slate-200`}
       >
         <Script id="consent-default" strategy="beforeInteractive">
           {`
@@ -113,7 +113,7 @@ export default function RootLayout({
           })}
         </Script>
         <LanguageProvider>
-          <div className="relative min-h-screen overflow-hidden bg-white dark:bg-slate-950">
+          <div className="relative min-h-screen overflow-hidden bg-slate-950">
             <div className="pointer-events-none absolute inset-0 -z-10">
               <Image
                 src={bgImage}
@@ -124,9 +124,9 @@ export default function RootLayout({
               />
               <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/80"></div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent dark:from-emerald-500/20 dark:via-teal-500/10 dark:to-transparent"></div>
-            <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-transparent dark:bg-emerald-500/30 rounded-full blur-[120px] dark:animate-pulse"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-transparent dark:bg-teal-400/20 rounded-full blur-[100px]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent from-emerald-500/20 via-teal-500/10 to-transparent"></div>
+            <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-emerald-500/30 rounded-full blur-[120px] animate-pulse"></div>
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-400/20 rounded-full blur-[100px]"></div>
 
             <div className="relative z-10 flex min-h-screen flex-col">
               <Navbar />
