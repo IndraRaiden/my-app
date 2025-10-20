@@ -10,7 +10,7 @@ import { gaEvent, adsConversion, makeAdsSendTo } from "@/lib/gtag";
 
 export default function ContactPage() {
   const { t } = useLanguage();
-  const whatsappNumber = "526242392710";
+  const whatsappNumber = "525545570439";
   const phoneNumbers = [
     { display: "+52 55 7430 9136", href: "tel:+525574309136" },
     { display: "+52 56 63 95 4818", href: "tel:+525663954818" },

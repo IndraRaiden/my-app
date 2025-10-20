@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
-  const whatsappNumber = "526242392710";
+  const whatsappNumber = "525545570439";
   const phoneNumbers = [
     { display: "+52 624 239 2710", href: "tel:+526242392710" },
     { display: "+52 56 63 95 4818", href: "tel:+525663954818" },

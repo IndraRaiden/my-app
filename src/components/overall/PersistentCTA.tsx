@@ -6,7 +6,7 @@ import { gaEvent, adsConversion, makeAdsSendTo } from "@/lib/gtag";
 
 export default function PersistentCTA() {
   const { t } = useLanguage();
-  const whatsappNumber = "526242392710";
+  const whatsappNumber = "525545570439";
   const emailAddress = "contacto@artificialwebs.com";
   const ADS_ID = "AW-17656232046";
   const ADS_LABEL_WHATSAPP = process.env.NEXT_PUBLIC_ADS_CONV_LABEL_WHATSAPP;
