@@ -6,6 +6,9 @@ import Navbar from "@/components/overall/navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import bgImage from "@/app/bg.png";
 import { Rocket, Eye, Sparkles, Award, UsersRound } from "lucide-react";
+import ernesto from "@/app/assets/ernesto.png";
+import ricardo from "@/app/assets/ricardo.png";
+import brando from "@/app/assets/brando.png";
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -123,6 +126,47 @@ export default function AboutPage() {
               </div>
             </div>
 
+            <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-8 shadow-2xl shadow-emerald-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">{t("aboutPage.storyTitle")}</h2>
+              <p className="text-slate-300/85 leading-relaxed max-w-3xl">{t("aboutPage.storyDesc")}</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="text-center space-y-2">
+                <h2 className="text-3xl font-bold text-white">{t("aboutPage.teamSectionTitle")}</h2>
+                <p className="text-slate-300/85 max-w-2xl mx-auto">{t("aboutPage.teamSectionDesc")}</p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-6 shadow-xl shadow-emerald-500/10">
+                  <div className="mb-4">
+                    <div className="h-24 w-24 rounded-full overflow-hidden ring-2 ring-emerald-500/40 bg-slate-900/60 relative">
+                      <Image src={ricardo} alt="Ricardo Mata" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="text-white font-semibold">Ricardo Mata</div>
+                  <div className="text-slate-400 text-sm">Lead Developer</div>
+                </div>
+                <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-6 shadow-xl shadow-emerald-500/10">
+                  <div className="mb-4">
+                    <div className="h-24 w-24 rounded-full overflow-hidden ring-2 ring-emerald-500/40 bg-slate-900/60 relative">
+                      <Image src={brando} alt="Brando Islas" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="text-white font-semibold">Brando Islas</div>
+                  <div className="text-slate-400 text-sm">Lead Designer</div>
+                </div>
+                <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-6 shadow-xl shadow-emerald-500/10">
+                  <div className="mb-4">
+                    <div className="h-24 w-24 rounded-full overflow-hidden ring-2 ring-emerald-500/40 bg-slate-900/60 relative">
+                      <Image src={ernesto} alt="Ernesto Rángel" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="text-white font-semibold">Ernesto Rángel</div>
+                  <div className="text-slate-400 text-sm">Fullstack Engineer</div>
+                </div>
+              </div>
+            </div>
+
             <div className="flex justify-center">
               <div className="inline-flex flex-col sm:flex-row items-center gap-5 p-6 rounded-2xl border border-emerald-500/20 bg-slate-950/85 shadow-lg shadow-emerald-500/10">
                 <div className="text-center sm:text-left space-y-2">
@@ -141,6 +185,33 @@ export default function AboutPage() {
                   className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30"
                 >
                   {t("aboutPage.joinTeam")}
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 md:mt-24 flex justify-center">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-5 p-6 rounded-2xl border border-emerald-500/20 bg-slate-950/85 shadow-lg shadow-emerald-500/10">
+              <div className="text-center sm:text-left space-y-2">
+                <h2 className="text-2xl font-semibold text-white">
+                  {t("portfolio.ctaTitle")}
+                </h2>
+                <p className="text-slate-300/85 text-sm md:text-base max-w-xl">
+                  {t("portfolio.ctaDesc")}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full font-semibold transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-500/30"
+                >
+                  {t("nav.getStarted")}
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 border border-emerald-500/30 bg-emerald-500/10 text-emerald-200 rounded-full font-semibold transition-colors hover:bg-emerald-500/20"
+                >
+                  {t("faqs.contactAdvisor")}
                 </Link>
               </div>
             </div>

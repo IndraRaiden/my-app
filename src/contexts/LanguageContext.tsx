@@ -1,6 +1,6 @@
-"use client";
+ "use client";
 
-import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+ import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 type Language = "es" | "en";
 
@@ -69,18 +69,23 @@ const translations: Record<Language, Record<string, string>> = {
   es: {
     // Navbar
     "nav.about": "Acerca de",
+    "nav.services": "Servicios",
     "nav.portfolio": "Portafolio",
-    "nav.faqs": "Preguntas Frecuentes",
+    "nav.faqs": "FAQ",
     "nav.contact": "Contacto",
-    "nav.getStarted": "Comenzar",
+    "nav.getStarted": "Agenda tu consulta gratuita",
+    "nav.blog": "Blog",
+    "nav.careers": "Trabaja con nosotros",
+
+    "cta.whatsapp": "Contáctanos por WhatsApp",
 
     // Hero Section
     "hero.badge": "Desarrollo Web Profesional",
-    "hero.title": "Soluciones digitales que impulsan tu negocio",
+    "hero.title": "Desarrollo web profesional enfocado en crecimiento empresarial",
     "hero.subtitle":
-      "Desarrollamos plataformas web robustas y escalables con tecnologías de vanguardia. Más de 5 años entregando resultados medibles para empresas en crecimiento.",
-    "hero.getStarted": "Solicitar Consultoría",
-    "hero.learnMore": "Ver Casos de Éxito",
+      "Creamos plataformas digitales escalables con tecnologías modernas y resultados medibles.",
+    "hero.getStarted": "Agenda tu consulta gratuita",
+    "hero.learnMore": "Ver proyectos reales",
     "hero.yearsExperience": "Años de experiencia",
     "hero.projectsDelivered": "Proyectos completados",
     "hero.clientRetention": "Retención de clientes",
@@ -93,6 +98,33 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.feature3Title": "Soporte Continuo",
     "hero.feature3Desc": "Mantenimiento y actualizaciones garantizadas",
     "hero.certifiedNote": "Certificados en las principales tecnologías web modernas y mejores prácticas de la industria.",
+
+    // Footer
+    "footer.companyName": "Artificial Webs",
+    "footer.country": "México",
+    "footer.tagline": "Soluciones web profesionales para negocios en crecimiento.",
+    "footer.location": "México (GMT-6)",
+    "footer.contact": "Contacto",
+    "footer.site": "Sitio",
+    "footer.legal": "Legal",
+    "footer.privacy": "Política de Privacidad",
+    "footer.terms": "Términos y Condiciones",
+    "footer.cookiesPrivacy": "Cookies y Privacidad",
+    "footer.insights": "Insights",
+    "footer.copyright": "Artificial Webs. Todos los derechos reservados.",
+
+    // Testimonials
+    "testimonials.badge": "Testimonios",
+    "testimonials.title": "Lo que dicen nuestros clientes",
+    "testimonials.item1Name": "Adrien Payet",
+    "testimonials.item1Role": "Cliente",
+    "testimonials.item1Quote": "El Equipo son grandes profesionales. Siempre fui muy satisfecho de sus trabajos! Altamente recomendable",
+    "testimonials.item2Name": "Lenny",
+    "testimonials.item2Role": "Cliente",
+    "testimonials.item2Quote": "Me gusto mucho trabajar con Artificial Webs y su equipo. TIenen mucho talento, se pueden lograr cosas increibles! Dicho eso, estoy muy satisfecho con su trabajo y seguro vuelvo a trabajar con ellos. ",
+    "testimonials.item3Name": "Cliente",
+    "testimonials.item3Role": "Cliente",
+    "testimonials.item3Quote": "Muy rapido y eficaz, fue un placer contratarles. Amables y atentos, me ayudaron y aconsejaron, el resultado fue espectacular. Volveré a trabajar con este equipo.",
 
     // About Section
     "about.badge": "Acerca de Artificial Webs",
@@ -122,12 +154,12 @@ const translations: Record<Language, Record<string, string>> = {
     "services.title": "Servicios Especializados",
     "services.subtitle":
       "Desarrollamos sitios web y soluciones digitales completas que impulsan tu negocio al siguiente nivel",
-    "services.webDev": "Sitios Web Corporativos",
+    "services.webDev": "Sitios Corporativos",
     "services.webDevDesc":
       "Sitios web profesionales, responsivos y optimizados que reflejan la esencia de tu marca con tecnología de punta",
     "services.responsiveDesign": "Diseño Responsivo",
     "services.performance": "Optimización de Rendimiento",
-    "services.mobileApps": "E-Commerce & Tiendas",
+    "services.mobileApps": "Tiendas en Línea",
     "services.mobileAppsDesc":
       "Plataformas de comercio electrónico completas con pasarelas de pago, gestión de inventario y más",
     "services.appStore": "Publicación en Tiendas de Apps",
@@ -139,6 +171,10 @@ const translations: Record<Language, Record<string, string>> = {
     "services.designSystems": "Sistemas de Diseño",
     "services.cta": "¿Listo para llevar tu negocio al mundo digital?",
     "services.getStarted": "Comenzar",
+
+    // Services - Maintenance
+    "services.maintenance": "Mantenimiento y Soporte",
+    "services.maintenanceDesc": "Mantenimiento proactivo, seguridad y mejoras continuas con planes flexibles.",
 
     // Contact Section
     "contact.badge": "Ponte en Contacto",
@@ -158,6 +194,10 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.emailTitle": "Correo",
     "contact.phoneTitle": "Teléfono",
     "contact.officeTitle": "Oficina",
+    "contact.whatsappLabel": "Iniciar chat en WhatsApp",
+    "contact.scheduleCall": "Agendar llamada",
+    "contact.hoursTitle": "Horarios de atención",
+    "contact.hoursValue": "Lun–Vie 9:00–18:00, Sáb 10:00–14:00 (GMT-6)",
 
     // About Page
     "aboutPage.badge": "Sobre Artificial Webs",
@@ -189,6 +229,10 @@ const translations: Record<Language, Record<string, string>> = {
     "aboutPage.teamDesc":
       "Un grupo diverso de personas talentosas apasionadas por crear experiencias digitales excepcionales e impulsar la innovación.",
     "aboutPage.joinTeam": "Únete a Nuestro Equipo",
+    "aboutPage.storyTitle": "Nuestra Historia",
+    "aboutPage.storyDesc": "Desde nuestros inicios, hemos ayudado a empresas y emprendedores a construir plataformas digitales que generan valor real y resultados medibles.",
+    "aboutPage.teamSectionTitle": "El Equipo",
+    "aboutPage.teamSectionDesc": "Conoce a los profesionales detrás de Artificial Webs. Un equipo multidisciplinario comprometido con la excelencia técnica y la innovación.",
 
     // FAQs Page
     "faqs.badge": "Preguntas Frecuentes",
@@ -223,6 +267,15 @@ const translations: Record<Language, Record<string, string>> = {
     "faqs.ctaTitle": "¿Aún tienes preguntas?",
     "faqs.ctaDesc": "¿No encuentras la respuesta que buscas? Nos encantaría saber de ti.",
     "faqs.ctaButton": "Ponte en Contacto",
+    "faqs.contactAdvisor": "Contactar asesor",
+
+    // FAQs extras
+    "faqs.q9": "¿Cuáles son los rangos de precios orientativos?",
+    "faqs.a9": "Ofrecemos rangos de inversión orientativos según alcance: landing pages, sitios corporativos y tiendas en línea. Al contactarnos te daremos una cotización clara y sin compromiso.",
+    "faqs.q10": "¿Ofrecen garantía y soporte poslanzamiento?",
+    "faqs.a10": "Sí. Incluimos garantía de corrección de errores y paquetes de soporte para actualizaciones, seguridad y mejoras continuas.",
+    "faqs.q11": "¿Puedo agendar una llamada para evaluar mi proyecto?",
+    "faqs.a11": "Claro. Agenda una consulta gratuita para revisar tu caso, objetivos y mejores alternativas.",
 
     // Portfolio Page
     "portfolio.badge": "Nuestro Portafolio",
@@ -245,22 +298,28 @@ const translations: Record<Language, Record<string, string>> = {
     "portfolio.ctaTitle": "¿Listo para iniciar tu proyecto?",
     "portfolio.ctaDesc": "Trabajemos juntos para crear algo increíble. Contáctanos hoy para una consulta gratuita.",
     "portfolio.ctaButton": "Iniciar Proyecto",
+    "portfolio.viewProject": "Ver proyecto completo",
   },
   en: {
     // Navbar
     "nav.about": "About",
+    "nav.services": "Services",
     "nav.portfolio": "Portfolio",
-    "nav.faqs": "FAQs",
+    "nav.faqs": "FAQ",
     "nav.contact": "Contact",
-    "nav.getStarted": "Get Started",
+    "nav.getStarted": "Schedule your free consultation",
+    "nav.blog": "Blog",
+    "nav.careers": "Careers",
+
+    "cta.whatsapp": "Contact us on WhatsApp",
 
     // Hero Section
     "hero.badge": "Professional Web Development",
-    "hero.title": "Digital solutions that drive your business forward",
+    "hero.title": "Professional web development focused on business growth",
     "hero.subtitle":
-      "We build robust and scalable web platforms with cutting-edge technologies. Over 5 years delivering measurable results for growing businesses.",
-    "hero.getStarted": "Request Consultation",
-    "hero.learnMore": "View Case Studies",
+      "We build scalable digital platforms with modern technologies and measurable results.",
+    "hero.getStarted": "Schedule your free consultation",
+    "hero.learnMore": "See real projects",
     "hero.yearsExperience": "Years of experience",
     "hero.projectsDelivered": "Projects completed",
     "hero.clientRetention": "Client retention",
@@ -273,6 +332,33 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.feature3Title": "Continuous Support",
     "hero.feature3Desc": "Maintenance and updates included",
     "hero.certifiedNote": "Certified in leading modern web technologies and industry best practices.",
+
+    // Footer
+    "footer.companyName": "Artificial Webs",
+    "footer.country": "Mexico",
+    "footer.tagline": "Professional web solutions for growing businesses.",
+    "footer.location": "Mexico (GMT-6)",
+    "footer.contact": "Contact",
+    "footer.site": "Site",
+    "footer.legal": "Legal",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms & Conditions",
+    "footer.cookiesPrivacy": "Cookies & Privacy",
+    "footer.insights": "Insights",
+    "footer.copyright": "Artificial Webs. All rights reserved.",
+
+    // Testimonials
+    "testimonials.badge": "Testimonials",
+    "testimonials.title": "What our clients say",
+    "testimonials.item1Name": "Maria G.",
+    "testimonials.item1Role": "Marketing Director",
+    "testimonials.item1Quote": "The new website improved speed and lead acquisition from the first month.",
+    "testimonials.item2Name": "Luis P.",
+    "testimonials.item2Role": "Retail CEO",
+    "testimonials.item2Quote": "Very professional team. They guided us and the result exceeded expectations.",
+    "testimonials.item3Name": "Ana R.",
+    "testimonials.item3Role": "Entrepreneur",
+    "testimonials.item3Quote": "Excellent communication and delivery times. 100% recommended.",
 
     // About Section
     "about.badge": "About Artificial Webs",
@@ -307,7 +393,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Professional, responsive and optimized websites that reflect the essence of your brand with cutting-edge technology",
     "services.responsiveDesign": "Responsive Design",
     "services.performance": "Performance Optimization",
-    "services.mobileApps": "E-Commerce & Stores",
+    "services.mobileApps": "Online Stores",
     "services.mobileAppsDesc":
       "Complete e-commerce platforms with payment gateways, inventory management, and more",
     "services.appStore": "App Store Deployment",
@@ -319,6 +405,10 @@ const translations: Record<Language, Record<string, string>> = {
     "services.designSystems": "Design Systems",
     "services.cta": "Ready to take your business to the digital world?",
     "services.getStarted": "Get Started",
+
+    // Services - Maintenance
+    "services.maintenance": "Maintenance & Support",
+    "services.maintenanceDesc": "Proactive maintenance, security, and continuous improvements with flexible plans.",
 
     // Contact Section
     "contact.badge": "Get In Touch",
@@ -338,6 +428,10 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.emailTitle": "Email",
     "contact.phoneTitle": "Phone",
     "contact.officeTitle": "Office",
+    "contact.whatsappLabel": "Start WhatsApp chat",
+    "contact.scheduleCall": "Schedule a call",
+    "contact.hoursTitle": "Business hours",
+    "contact.hoursValue": "Mon–Fri 9:00–18:00, Sat 10:00–14:00 (GMT-6)",
 
     // About Page
     "aboutPage.badge": "About Artificial Webs",
@@ -369,6 +463,10 @@ const translations: Record<Language, Record<string, string>> = {
     "aboutPage.teamDesc":
       "A diverse group of talented individuals passionate about creating exceptional digital experiences and driving innovation forward.",
     "aboutPage.joinTeam": "Join Our Team",
+    "aboutPage.storyTitle": "Our Story",
+    "aboutPage.storyDesc": "Since day one, we've helped businesses and entrepreneurs build digital platforms that create real value and measurable results.",
+    "aboutPage.teamSectionTitle": "The Team",
+    "aboutPage.teamSectionDesc": "Meet the people behind Artificial Webs. A multidisciplinary team committed to technical excellence and innovation.",
 
     // FAQs Page
     "faqs.badge": "FAQs",
@@ -403,6 +501,15 @@ const translations: Record<Language, Record<string, string>> = {
     "faqs.ctaTitle": "Still have questions?",
     "faqs.ctaDesc": "Can't find the answer you're looking for? We'd love to hear from you.",
     "faqs.ctaButton": "Get In Touch",
+    "faqs.contactAdvisor": "Contact an advisor",
+
+    // FAQs extras
+    "faqs.q9": "What are the indicative price ranges?",
+    "faqs.a9": "We provide indicative investment ranges by scope: landing pages, corporate sites and online stores. Contact us for a clear, no-obligation quote.",
+    "faqs.q10": "Do you offer warranty and post-launch support?",
+    "faqs.a10": "Yes. We include bug-fix warranty and support packages for updates, security and continuous improvements.",
+    "faqs.q11": "Can I schedule a call to evaluate my project?",
+    "faqs.a11": "Absolutely. Book a free consultation to review your case, goals and best alternatives.",
 
     // Portfolio Page
     "portfolio.badge": "Our Portfolio",
@@ -425,5 +532,6 @@ const translations: Record<Language, Record<string, string>> = {
     "portfolio.ctaTitle": "Ready to start your project?",
     "portfolio.ctaDesc": "Let's work together to create something amazing. Contact us today for a free consultation.",
     "portfolio.ctaButton": "Start Project",
+    "portfolio.viewProject": "View full project",
   },
 };

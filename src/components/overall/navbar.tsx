@@ -14,6 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
+    { href: "/#services", key: "nav.services" as const },
     { href: "/about", key: "nav.about" as const },
     { href: "/portfolio", key: "nav.portfolio" as const },
     { href: "/faqs", key: "nav.faqs" as const },

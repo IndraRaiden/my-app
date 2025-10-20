@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -7,6 +6,8 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/overall/navbar";
 import CookieConsent from "@/components/overall/CookieConsent";
+import PersistentCTA from "@/components/overall/PersistentCTA";
+import Footer from "@/components/overall/footer";
 import bgImage from "@/app/bg.png";
 
 const geistSans = Geist({
@@ -75,6 +76,10 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-JJYNN7JM4S"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17656232046"
+          strategy="afterInteractive"
+        />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -133,18 +138,10 @@ export default function RootLayout({
               <main className="flex-1 pt-0 md:pt-4">
                 {children}
               </main>
-              <footer className="mt-16 mb-10 px-6">
-                <div className="max-w-6xl mx-auto rounded-2xl border border-emerald-500/20 bg-slate-950/80 text-slate-200 px-6 py-5 text-center shadow-lg shadow-emerald-500/10">
-                  <p className="text-sm sm:text-base">
-                    No tenemos footer, gracias por leer, contactanos!{" "}
-                    <Link href="/contact" className="text-emerald-300 font-semibold hover:text-emerald-200 transition-colors">
-                      Aquí
-                    </Link>
-                  </p>
-                </div>
-              </footer>
+              <Footer />
             </div>
           </div>
+        <PersistentCTA />
         </LanguageProvider>
         <CookieConsent />
       </body>

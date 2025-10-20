@@ -1,6 +1,7 @@
 import One from "@/components/index/one";
 import Two from "@/components/index/two";
 import Three from "@/components/index/three";
+import Testimonials from "@/components/index/testimonials";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
 
         {/* Services Section */}
         <Three />
+
+        <Testimonials />
 
       </div>
     </div>

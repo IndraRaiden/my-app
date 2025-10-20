@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/overall/navbar";
+import Script from "next/script";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Websites from "@/components/portfolio/Websites";
 import ImageGalleryModal from "@/components/portfolio/ImageGalleryModal";
@@ -92,6 +93,16 @@ export default function PortfolioPage() {
       <Navbar />
 
       <div className="relative z-10 flex flex-col pt-28 pb-24 px-6 md:px-12">
+        <Script id="ld-portfolio-breadcrumbs" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.artificialwebs.com/" },
+              { "@type": "ListItem", position: 2, name: "Portafolio", item: "https://www.artificialwebs.com/portfolio" },
+            ],
+          })}
+        </Script>
         <section className="max-w-6xl mx-auto w-full">
           <div className="relative">
             <div className="pointer-events-none absolute -right-24 -top-20 hidden xl:block w-[520px] opacity-90 rotate-3">
@@ -194,7 +205,7 @@ export default function PortfolioPage() {
                       onClick={() => setIsFeaturedOpen(true)}
                       className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors"
                     >
-                      Ver galería
+                      {t("portfolio.viewProject")}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 7h7v10H6z"/></svg>
                     </button>
                   </div>

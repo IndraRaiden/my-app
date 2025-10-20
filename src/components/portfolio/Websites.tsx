@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import ImageGalleryModal from "./ImageGalleryModal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface WebsiteCardProps {
   id: number;
@@ -15,6 +17,7 @@ interface WebsiteCardProps {
 
 export default function Websites({ id, category, technologies, title, description, images }: WebsiteCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -34,8 +37,8 @@ export default function Websites({ id, category, technologies, title, descriptio
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-white text-sm font-medium bg-emerald-500/90 px-4 py-2 rounded-lg">
-                  View Gallery ({images.length})
+                <div className="text-white text-sm font-semibold bg-emerald-600 px-4 py-2 rounded-lg shadow-md shadow-emerald-500/30">
+                  {t("portfolio.viewProject")}
                 </div>
               </div>
             </>
@@ -82,6 +85,16 @@ export default function Websites({ id, category, technologies, title, descriptio
                 {tech}
               </span>
             ))}
+          </div>
+
+          <div className="mt-5">
+            <Link
+              href={`/portfolio/${id}`}
+              className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-semibold text-emerald-200 transition-colors hover:bg-emerald-500/20"
+            >
+              {t("portfolio.viewProject")}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 7h7v10H6z"/></svg>
+            </Link>
           </div>
         </div>
       </div>

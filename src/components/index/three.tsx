@@ -6,17 +6,17 @@ import bgImage from '@/app/bg.png';
 import bg3 from '@/app/bg3.png';
 import { Zap, Users, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Script from "next/script";
 
 export default function Three() {
   const { t } = useLanguage();
   return (
-    <section className="relative overflow-hidden py-20 px-8 md:px-12 bg-slate-950 text-slate-100">
+    <section id="services" className="relative overflow-hidden py-20 px-8 md:px-12 bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <Image
           src={bgImage}
           alt="Background"
           fill
-          priority
           className="object-cover object-center opacity-40 [transform:scaleX(-1)]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/70 to-slate-950/90"></div>
@@ -35,6 +35,19 @@ export default function Three() {
           </p>
         </div>
 
+        <Script id="ld-services" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: [
+              { "@type": "Service", name: t("services.webDev"), description: t("services.webDevDesc") },
+              { "@type": "Service", name: t("services.mobileApps"), description: t("services.mobileAppsDesc") },
+              { "@type": "Service", name: t("services.uiux"), description: t("services.uiuxDesc") },
+              { "@type": "Service", name: t("services.maintenance"), description: t("services.maintenanceDesc") },
+            ],
+          })}
+        </Script>
+
         <div className="relative mb-16">
           <div className="pointer-events-none absolute inset-x-4 sm:inset-x-6 -top-6 sm:-top-10 bottom-[-40px] z-0">
             <div className="relative h-full overflow-hidden rounded-3xl border border-emerald-500/20 shadow-[0_25px_80px_-40px_rgba(16,185,129,0.45)]">
@@ -43,14 +56,13 @@ export default function Three() {
                 alt="Decorative"
                 fill
                 className="object-cover"
-                priority
               />
               <div className="absolute inset-0 bg-gradient-to-b from-slate-950/45 via-slate-950/20 to-slate-950/45"></div>
             </div>
           </div>
 
           {/* Services Grid */}
-          <div className="relative z-10 grid md:grid-cols-3 gap-8">
+          <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Service 1 */}
             <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/55 backdrop-blur-lg p-7 shadow-2xl shadow-emerald-500/10 transition-transform duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-4 mb-6">
@@ -130,6 +142,18 @@ export default function Three() {
                   API Integration
                 </li>
               </ul>
+            </div>
+
+            <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/55 backdrop-blur-lg p-7 shadow-2xl shadow-emerald-500/10 transition-transform duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 ring-1 ring-emerald-500/40 text-emerald-300/90">
+                  <Users className="w-5 h-5" />
+                </div>
+                <h4 className="text-2xl font-semibold text-white tracking-tight">{t("services.maintenance")}</h4>
+              </div>
+              <p className="text-slate-300/85">
+                {t("services.maintenanceDesc")}
+              </p>
             </div>
           </div>
         </div>
