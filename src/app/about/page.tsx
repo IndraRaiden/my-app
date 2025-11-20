@@ -9,6 +9,7 @@ import { Rocket, Eye, Sparkles, Award, UsersRound } from "lucide-react";
 import ernesto from "@/app/assets/ernesto.png";
 import ricardo from "@/app/assets/ricardo.png";
 import brando from "@/app/assets/brando.png";
+import tavo from "@/app/assets/tavo.png";
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -136,7 +137,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-white">{t("aboutPage.teamSectionTitle")}</h2>
                 <p className="text-slate-300/85 max-w-2xl mx-auto">{t("aboutPage.teamSectionDesc")}</p>
               </div>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-6 shadow-xl shadow-emerald-500/10">
                   <div className="mb-4">
                     <div className="h-24 w-24 rounded-full overflow-hidden ring-2 ring-emerald-500/40 bg-slate-900/60 relative">
@@ -162,6 +163,15 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div className="text-white font-semibold">Ernesto Rángel</div>
+                  <div className="text-slate-400 text-sm">Fullstack Engineer</div>
+                </div>
+                <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-slate-950/80 p-6 shadow-xl shadow-emerald-500/10">
+                  <div className="mb-4">
+                    <div className="h-24 w-24 rounded-full overflow-hidden ring-2 ring-emerald-500/40 bg-slate-900/60 relative">
+                      <Image src={tavo} alt="Octavio Aguilar" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="text-white font-semibold">Octavio Aguilar</div>
                   <div className="text-slate-400 text-sm">Fullstack Engineer</div>
                 </div>
               </div>
